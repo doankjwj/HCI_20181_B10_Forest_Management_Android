@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">HCI_2018_ForestManagement</string>
+    <string name="app_name">Forest Management</string>
+    <string name="bnb_forest">Map</string>
+    <string name="bnb_drone">Drone</string>
+    <string name="bnb_action">Action</string>
+    <string name="bnb_profile">Profile</string>
+    <string name="bnb_admin_tool">Admin Tool</string>
 </resources>

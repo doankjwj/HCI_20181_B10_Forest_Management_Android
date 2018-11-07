@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bnb_forest"
+        android:icon="@drawable/bnb_forest"
+        android:title="@string/bnb_forest" />
+
+    <item
+        android:id="@+id/bnb_drone"
+        android:icon="@drawable/bnb_drone"
+        android:title="@string/bnb_drone" />
+
+    <item
+        android:id="@+id/bnb_action"
+        android:icon="@drawable/bnb_action"
+        android:title="@string/bnb_action" />
+
+    <item
+        android:id="@+id/bnb_profile"
+        android:icon="@drawable/bnb_profile"
+        android:title="@string/bnb_profile" />
+    <item
+        android:id="@+id/bnb_admin_tool"
+        android:icon="@drawable/bnb_admin"
+        android:title="@string/bnb_admin_tool" />
+
+</menu>
