@@ -1,8 +1,28 @@
 <resources>
-    <string name="app_name">Forest Management</string>
+    <string name="bnb_logout">Đăng xuất</string>
+    <string name="bnb_setting">Cài đặt</string>
+
+    <string name="app_name">Quản lý rừng</string>
     <string name="bnb_forest">Map</string>
     <string name="bnb_drone">Drone</string>
     <string name="bnb_action">Action</string>
     <string name="bnb_profile">Profile</string>
-    <string name="bnb_admin_tool">Admin Tool</string>
+    <string name="bnb_admin_tool">Users</string>
+    <string name="bnb_analyze">Analyze</string>
+
+    <!--User Profile-->
+    <string name="tab_text_1">Thông tin</string>
+    <string name="tab_text_2">Đổi mật khẩu</string>
+    <string name="tab_text_3">Hoạt động</string>
+    <string name="bnb_changePass">Change Password</string>
+    <string name="bnb_updateProfile">Update Profile</string>
+
+    <!--Drone-->
+    <string name="title_activity_drone">DroneActivity</string>
+    <string name="tab_drone_1">Hoạt động</string>
+    <string name="tab_drone_2">Đang rảnh</string>
+    <string name="tab_drone_3">Bảo trì</string>
+
+    <string name="tab_users_1">Danh sách</string>
+    <string name="tab_users_2">Thêm tài khoản</string>
 </resources>

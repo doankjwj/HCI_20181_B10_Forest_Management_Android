@@ -20,9 +20,4 @@
         android:id="@+id/bnb_profile"
         android:icon="@drawable/bnb_profile"
         android:title="@string/bnb_profile" />
-    <item
-        android:id="@+id/bnb_admin_tool"
-        android:icon="@drawable/bnb_admin"
-        android:title="@string/bnb_admin_tool" />
-
 </menu>

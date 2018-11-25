@@ -16,7 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.DroneActivity" />
+        <activity android:name=".activities.ActionActivity" />
+        <activity android:name=".activities.AnalyzeActivity" />
+        <activity android:name=".activities.UsersActivity" />
+        <activity android:name=".DroneDetaillActivity" />
+        <activity android:name=".activities.UserDetailActivity"></activity>
     </application>
 
 </manifest>
