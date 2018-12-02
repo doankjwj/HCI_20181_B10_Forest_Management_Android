@@ -5,15 +5,19 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.doannd.hci_2018_forestmanagement.MyDatabaseHelper;
 import com.example.doannd.hci_2018_forestmanagement.R;
 import com.example.doannd.hci_2018_forestmanagement.User;
 import com.example.doannd.hci_2018_forestmanagement.Video;
@@ -28,21 +32,22 @@ import java.util.List;
 
 import static java.security.AccessController.getContext;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link ActionVideoFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link ActionVideoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class ActionVideoFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+    private ListView listView;
+    private String sort;
+
+    private static final int MENU_ITEM_VIEW = 111;
+    private static final int MENU_ITEM_EDIT = 222;
+    private static final int MENU_ITEM_CREATE = 333;
+    private static final int MENU_ITEM_DELETE = 444;
+    private static final int MY_REQUEST_CODE = 1000;
+
+    private final List<Video> noteList = new ArrayList<Video>();
+    private ArrayAdapter<Video> listViewAdapter;
+
     private String mParam1;
     private String mParam2;
 
@@ -52,15 +57,6 @@ public class ActionVideoFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ActionVideoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static ActionVideoFragment newInstance(String param1, String param2) {
         ActionVideoFragment fragment = new ActionVideoFragment();
         Bundle args = new Bundle();
@@ -89,53 +85,44 @@ public class ActionVideoFragment extends Fragment {
         btnTheoKhuVuc=(Button) view.findViewById(R.id.btnTheoKhuVuc);
         btnTheoNgay=(Button) view.findViewById(R.id.btnTheoNgay);
 
-        btnTheoDrone.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                //sort gridview
-            }
-        });
-
-        btnTheoKhuVuc.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-
-            }
-        });
-
-        btnTheoNgay.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-
-            }
-        });
-
         final GridView gridView = (GridView) view.findViewById(R.id.grvVideo);
 
-        Video v1=new Video("video1","drone1","khuvuc1","20/11/2018");
-        Video v2=new Video("video2","drone2","khuvuc1","21/11/2018");
-        Video v3=new Video("video3","drone2","khuvuc2","22/11/2018");
-        Video v4=new Video("video4","drone3","khuvuc3","23/11/2018");
-        Video v5=new Video("video5","drone3","khuvuc5","24/11/2018");
-        Video v6=new Video("video6","drone3","khuvuc8","25/11/2018");
+        final MyDatabaseHelper db = new MyDatabaseHelper(getContext());
+        db.createDefaultNotesIfNeed();
 
-//        Video[] videos=new Video[]{v1,v2,v3,v4,v5,v6};
-        List<Video> videos =new ArrayList<>();
-        videos.add(v1);
-        videos.add(v2);
-        videos.add(v3);
-        videos.add(v4);
-        videos.add(v5);
-        videos.add(v6);
+        List<Video> list=  db.getAllNotes("Video_Drone_Id");
+        this.noteList.addAll(list);
 
-//        ArrayAdapter<Video> arrayAdapter
-//                = new ArrayAdapter<Video>(getContext(), android.R.layout.list , videos);
+//        this.listViewAdapter = new ArrayAdapter<Video>(getContext(),
+//                android.R.layout.simple_list_item_1, android.R.id.text1, this.noteList);
+//
+//
+//        // Đăng ký Adapter cho ListView.
+//        this.listView.setAdapter(this.listViewAdapter);
+//
+//        // Đăng ký Context menu cho ListView.
+//        registerForContextMenu(this.listView);
 
+//        Video v1=new Video("video1","drone1","khuvuc1","20/11/2018");
+//        Video v2=new Video("video2","drone2","khuvuc1","21/11/2018");
+//        Video v3=new Video("video3","drone2","khuvuc2","22/11/2018");
+//        Video v4=new Video("video4","drone3","khuvuc3","23/11/2018");
+//        Video v5=new Video("video5","drone3","khuvuc5","24/11/2018");
+//        Video v6=new Video("video6","drone3","khuvuc8","25/11/2018");
+//
+////        Video[] videos=new Video[]{v1,v2,v3,v4,v5,v6};
+//        List<Video> videos =new ArrayList<>();
+//        videos.add(v1);
+//        videos.add(v2);
+//        videos.add(v3);
+//        videos.add(v4);
+//        videos.add(v5);
+//        videos.add(v6);
+//
+////        ArrayAdapter<Video> arrayAdapter
+////                = new ArrayAdapter<Video>(getContext(), android.R.layout.list , videos);
 
-        gridView.setAdapter(new VideoGridAdapter(getContext(),videos));
+        gridView.setAdapter(new VideoGridAdapter(getContext(),this.noteList));
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -154,8 +141,103 @@ public class ActionVideoFragment extends Fragment {
                 intent.putExtra("khuvucid",video.getKhuVucID());
                 intent.putExtra("date",video.getDate());
                 startActivity(intent);
+
             }
         });
+
+        btnTheoDrone.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                //MyDatabaseHelper db = new MyDatabaseHelper(getContext());
+                List<Video> list=  db.getAllNotes("Video_Drone_Id");
+                noteList.clear();
+                noteList.addAll(list);
+                gridView.setAdapter(new VideoGridAdapter(getContext(),noteList));
+                gridView.invalidateViews();
+            }
+        });
+
+        btnTheoKhuVuc.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                List<Video> list=  db.getAllNotes("Video_KhuVuc_Id");
+                noteList.clear();
+                noteList.addAll(list);
+                gridView.setAdapter(new VideoGridAdapter(getContext(),noteList));
+                gridView.invalidateViews();
+            }
+        });
+
+        btnTheoNgay.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                List<Video> list=  db.getAllNotes("Video_Date");
+                noteList.clear();
+                noteList.addAll(list);
+                gridView.setAdapter(new VideoGridAdapter(getContext(),noteList));
+                gridView.invalidateViews();
+            }
+        });
+
         return view;
     }
+
+//    @Override
+//    public void onCreateContextMenu(ContextMenu menu, View view,
+//                                    ContextMenu.ContextMenuInfo menuInfo)    {
+//        //super.onCreateContextMenu(menu, view, menuInfo);
+//        menu.setHeaderTitle("Select The Action");
+//
+//        // groupId, itemId, order, title
+//        menu.add(0, MENU_ITEM_VIEW , 0, "View Video");
+//        menu.add(0, MENU_ITEM_CREATE , 1, "Create Video");
+//        menu.add(0, MENU_ITEM_EDIT , 2, "Edit Video");
+//        menu.add(0, MENU_ITEM_DELETE, 4, "Delete Video");
+//    }
+
+    //chỗ này để thêm sửa xóa
+//    @Override
+//    public boolean onContextItemSelected(MenuItem item){
+//        AdapterView.AdapterContextMenuInfo
+//                info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+//
+//        final Video selectedNote = (Video) this.listView.getItemAtPosition(info.position);
+//
+//        if(item.getItemId() == MENU_ITEM_VIEW){
+//            Toast.makeText(getActivity().getApplicationContext(),selectedNote.getVideoID(),Toast.LENGTH_LONG).show();
+//        }
+//        else if(item.getItemId() == MENU_ITEM_CREATE){
+//            Intent intent = new Intent(this, AddEditNoteActivity.class);
+//
+//            // Start AddEditNoteActivity, có phản hồi.
+//            this.startActivityForResult(intent, MY_REQUEST_CODE);
+//        }
+//        else if(item.getItemId() == MENU_ITEM_EDIT ){
+//            Intent intent = new Intent(this, AddEditNoteActivity.class);
+//            intent.putExtra("note", selectedNote);
+//
+//            // Start AddEditNoteActivity, có phản hồi.
+//            this.startActivityForResult(intent,MY_REQUEST_CODE);
+//        }
+//        else if(item.getItemId() == MENU_ITEM_DELETE){
+//            // Hỏi trước khi xóa.
+//            new AlertDialog.Builder(this)
+//                    .setMessage(selectedNote.getNoteTitle()+". Are you sure you want to delete?")
+//                    .setCancelable(false)
+//                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                        public void onClick(DialogInterface dialog, int id) {
+//                            deleteNote(selectedNote);
+//                        }
+//                    })
+//                    .setNegativeButton("No", null)
+//                    .show();
+//        }
+//        else {
+//            return false;
+//        }
+//        return true;
+//    }
 }

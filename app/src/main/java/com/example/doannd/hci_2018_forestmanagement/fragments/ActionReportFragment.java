@@ -10,14 +10,6 @@ import android.view.ViewGroup;
 
 import com.example.doannd.hci_2018_forestmanagement.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link ActionReportFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link ActionReportFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class ActionReportFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
