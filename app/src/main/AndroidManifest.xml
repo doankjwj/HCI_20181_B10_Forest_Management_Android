@@ -40,9 +40,11 @@
         <activity
             android:name=".ActivitySelectDrone"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
-        <activity android:name=".ActivityConfigDrone"
+        <activity
+            android:name=".ActivityConfigDrone"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity android:name=".activities.VideoDetail" />
+        <activity android:name=".activities.NewUserActivity"></activity>
     </application>
 
 </manifest>

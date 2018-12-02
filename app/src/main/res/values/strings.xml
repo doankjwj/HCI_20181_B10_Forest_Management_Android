@@ -18,11 +18,11 @@
     <string name="area_height">Height(B-N):</string>
     <string name="area_size">Diện tích:</string>
     <string name="intentKey">areaSelector</string>
-    <string-array name="spinnerDroneSelector" >
+    <string-array name="spinnerDroneSelector">
         <item>Hệ thống</item>
         <item>Thủ công</item>
     </string-array>
-    <string-array name="spinnerDroneHeight" >
+    <string-array name="spinnerDroneHeight">
         <item>10m</item>
         <item>15m</item>
         <item>20m</item>

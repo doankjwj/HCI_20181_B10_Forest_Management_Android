@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -22,6 +23,12 @@ public class UsersActivity extends BaseActivity {
         setContentView(R.layout.activity_users);
 
         settingBottom();
+
+        Intent intent = getIntent();
+        String notify = intent.getStringExtra("notify");
+        if (notify!=null){
+            Toast.makeText(UsersActivity.this,notify,Toast.LENGTH_LONG).show();
+        }
 
         final ListView listView = (ListView)findViewById(R.id.listUsers);
 
@@ -52,13 +59,23 @@ public class UsersActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
                 Object o = listView.getItemAtPosition(position);
                 User user = (User) o;
-                Toast.makeText(UsersActivity.this, "Selected :" + " " + user, Toast.LENGTH_LONG).show();
+                //Toast.makeText(UsersActivity.this, "Selected :" + " " + user, Toast.LENGTH_LONG).show();
 
                 Intent intent=new Intent(UsersActivity.this, UserDetailActivity.class);
                 intent.putExtra("username",user.getUserName());
                 intent.putExtra("usertype",user.getUserType());
                 intent.putExtra("hoten",user.getHoTen());
                 intent.putExtra("birthday",user.getBirthDay());
+                startActivity(intent);
+            }
+        });
+
+        Button btnAdd=(Button)findViewById(R.id.btnAdd);
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(UsersActivity.this,NewUserActivity.class);
                 startActivity(intent);
             }
         });

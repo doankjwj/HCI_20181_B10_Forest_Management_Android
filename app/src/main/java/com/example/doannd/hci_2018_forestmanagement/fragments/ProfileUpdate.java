@@ -10,8 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.content.Context;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.doannd.hci_2018_forestmanagement.R;
+
+import static java.security.AccessController.getContext;
 
 
 public class ProfileUpdate extends Fragment {
@@ -37,6 +40,13 @@ public class ProfileUpdate extends Fragment {
         edtUserType.setText(sharedPref.getString("usertype",""));
         edtHoTen.setText(sharedPref.getString("hoten",""));
         edtBirthDay.setText(sharedPref.getString("birthday",""));
+
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"Cập nhật thành công!",Toast.LENGTH_LONG).show();
+            }
+        });
 
         return  rootView;
     }

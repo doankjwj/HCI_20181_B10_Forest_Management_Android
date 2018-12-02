@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.view.View;
@@ -18,6 +19,7 @@ public class UserDetailActivity extends BaseActivity {
     private EditText edtUsername,edtHoTen,edtBirthDay;
     private Spinner spUserType;
     private String username,usertype,hoten,birthday;
+    private Button btnUpdate,btnDelete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,25 @@ public class UserDetailActivity extends BaseActivity {
         spUserType.setAdapter(adapter);
         spUserType.setSelection(adapter.getPosition(usertype));
         spUserType.setOnItemSelectedListener(new MyProcessEvent());
+
+        btnUpdate=(Button) findViewById(R.id.btnUpdate);
+        btnDelete=(Button) findViewById(R.id.btnDelete);
+
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(UserDetailActivity.this, "Cập nhật thành công!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(UserDetailActivity.this,UsersActivity.class);
+                intent.putExtra("notify","Đã xóa");
+                startActivity(intent);
+            }
+        });
     }
 
     private class MyProcessEvent implements AdapterView.OnItemSelectedListener
