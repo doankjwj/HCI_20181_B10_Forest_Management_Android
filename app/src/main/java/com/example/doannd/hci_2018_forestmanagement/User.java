@@ -68,6 +68,14 @@ public class User implements Serializable {
         this.active = active;
     }
 
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
     @Override
     public String toString() {
         return this.userName + " (" + this.userType + ")";

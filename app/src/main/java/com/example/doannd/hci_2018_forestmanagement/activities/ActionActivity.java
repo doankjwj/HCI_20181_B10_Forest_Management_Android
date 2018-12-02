@@ -61,7 +61,7 @@ public class ActionActivity extends BaseActivity {
 
         @Override
         public int getCount(){
-            return 5;
+            return 3;
         }
     }
 }
