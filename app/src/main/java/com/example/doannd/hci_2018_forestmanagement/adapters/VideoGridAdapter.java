@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.doannd.hci_2018_forestmanagement.R;
-import com.example.doannd.hci_2018_forestmanagement.Video;
+import com.example.doannd.hci_2018_forestmanagement.model.Video;
 
 import java.util.List;
 

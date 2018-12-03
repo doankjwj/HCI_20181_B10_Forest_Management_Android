@@ -1,5 +1,6 @@
 package com.example.doannd.hci_2018_forestmanagement.activities;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -25,6 +26,9 @@ public class ActionActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_action);
+
+        Intent intent = getIntent();
+        intent.putExtra("currentMenuItem","action");
 
         settingBottom();
 

@@ -1,13 +1,9 @@
 package com.example.doannd.hci_2018_forestmanagement.fragments;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -15,15 +11,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.doannd.hci_2018_forestmanagement.MyDatabaseHelper;
 import com.example.doannd.hci_2018_forestmanagement.R;
-import com.example.doannd.hci_2018_forestmanagement.User;
-import com.example.doannd.hci_2018_forestmanagement.Video;
-import com.example.doannd.hci_2018_forestmanagement.activities.ActionActivity;
-import com.example.doannd.hci_2018_forestmanagement.activities.UserDetailActivity;
-import com.example.doannd.hci_2018_forestmanagement.activities.UsersActivity;
+import com.example.doannd.hci_2018_forestmanagement.model.Video;
 import com.example.doannd.hci_2018_forestmanagement.activities.VideoDetail;
 import com.example.doannd.hci_2018_forestmanagement.adapters.VideoGridAdapter;
 
@@ -87,10 +78,11 @@ public class ActionVideoFragment extends Fragment {
 
         final GridView gridView = (GridView) view.findViewById(R.id.grvVideo);
 
-        final MyDatabaseHelper db = new MyDatabaseHelper(getContext());
-        db.createDefaultNotesIfNeed();
+        //final MyDatabaseHelper db = new MyDatabaseHelper(getContext());
+        final MyDatabaseHelper db = MyDatabaseHelper.getInstance(getContext());
+        //db.createDefaultNotesIfNeed();
 
-        List<Video> list=  db.getAllNotes("Video_Drone_Id");
+        List<Video> list=  db.getAllVideos("Video_Drone_Id");
         this.noteList.addAll(list);
 
 //        this.listViewAdapter = new ArrayAdapter<Video>(getContext(),
@@ -150,7 +142,7 @@ public class ActionVideoFragment extends Fragment {
             @Override
             public void onClick(View arg0) {
                 //MyDatabaseHelper db = new MyDatabaseHelper(getContext());
-                List<Video> list=  db.getAllNotes("Video_Drone_Id");
+                List<Video> list=  db.getAllVideos("Video_Drone_Id");
                 noteList.clear();
                 noteList.addAll(list);
                 gridView.setAdapter(new VideoGridAdapter(getContext(),noteList));
@@ -162,7 +154,7 @@ public class ActionVideoFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
-                List<Video> list=  db.getAllNotes("Video_KhuVuc_Id");
+                List<Video> list=  db.getAllVideos("Video_KhuVuc_Id");
                 noteList.clear();
                 noteList.addAll(list);
                 gridView.setAdapter(new VideoGridAdapter(getContext(),noteList));
@@ -174,7 +166,7 @@ public class ActionVideoFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
-                List<Video> list=  db.getAllNotes("Video_Date");
+                List<Video> list=  db.getAllVideos("Video_Date");
                 noteList.clear();
                 noteList.addAll(list);
                 gridView.setAdapter(new VideoGridAdapter(getContext(),noteList));

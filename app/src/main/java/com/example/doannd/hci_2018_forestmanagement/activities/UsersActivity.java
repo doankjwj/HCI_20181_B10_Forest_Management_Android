@@ -8,11 +8,11 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.doannd.hci_2018_forestmanagement.MyDatabaseHelper;
 import com.example.doannd.hci_2018_forestmanagement.R;
-import com.example.doannd.hci_2018_forestmanagement.User;
+import com.example.doannd.hci_2018_forestmanagement.model.User;
 import com.example.doannd.hci_2018_forestmanagement.adapters.UserListAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class UsersActivity extends BaseActivity {
@@ -22,9 +22,11 @@ public class UsersActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users);
 
+        Intent intent = getIntent();
+        intent.putExtra("currentMenuItem","users");
+
         settingBottom();
 
-        Intent intent = getIntent();
         String notify = intent.getStringExtra("notify");
         if (notify!=null){
             Toast.makeText(UsersActivity.this,notify,Toast.LENGTH_LONG).show();
@@ -32,23 +34,8 @@ public class UsersActivity extends BaseActivity {
 
         final ListView listView = (ListView)findViewById(R.id.listUsers);
 
-        List<User> users = new ArrayList<>();
-        users.add(new User("kiemlam","1234","Kiểm lâm","Nguyễn Đình Khiêm","1/1/2000"));
-        users.add(new User("quantrivien","1234","Quản trị viên","Hoa Nguyễn","1/1/2000"));
-        users.add(new User("kiemlam","1234","Kiểm lâm","Nguyễn Đình Khiêm","1/1/2000"));
-        users.add(new User("kiemlam","1234","Kiểm lâm","Hoa Nguyễn","1/1/2000"));
-        users.add(new User("kiemlam","1234","Kiểm lâm","Nguyễn Đình Khiêm","1/1/2000"));
-        users.add(new User("phantichvien","1234","Phân tích viên","Hoa Nguyễn","1/1/2000"));
-        users.add(new User("quantrivien","1234","Quản trị viên","Nguyễn Đình Khiêm","1/1/2000"));
-
-
-        // android.R.layout.simple_list_item_1: Là một hằng số Layout định nghĩa sẵn của Android
-        // ý nghĩa của nó là ListView với ListItem đơn giản (Duy nhất một TextView).
-// dùng mảng
-        //ArrayAdapter<User> arrayAdapter
-               // = new ArrayAdapter<User>(this, android.R.layout.simple_list_item_1 , users);
-
-        //listView.setAdapter(arrayAdapter);
+        MyDatabaseHelper db = MyDatabaseHelper.getInstance(UsersActivity.this);
+        List<User> users=db.getAllUsers();
 
         listView.setAdapter(new UserListAdapter(this, users));
 
@@ -59,10 +46,10 @@ public class UsersActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
                 Object o = listView.getItemAtPosition(position);
                 User user = (User) o;
-                //Toast.makeText(UsersActivity.this, "Selected :" + " " + user, Toast.LENGTH_LONG).show();
 
                 Intent intent=new Intent(UsersActivity.this, UserDetailActivity.class);
                 intent.putExtra("username",user.getUserName());
+                intent.putExtra("password",user.getPassWord());
                 intent.putExtra("usertype",user.getUserType());
                 intent.putExtra("hoten",user.getHoTen());
                 intent.putExtra("birthday",user.getBirthDay());
