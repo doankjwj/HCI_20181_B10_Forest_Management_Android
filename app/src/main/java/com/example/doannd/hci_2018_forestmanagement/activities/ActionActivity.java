@@ -16,6 +16,7 @@ import com.example.doannd.hci_2018_forestmanagement.fragments.ActionReportFragme
 import com.example.doannd.hci_2018_forestmanagement.fragments.ActionVideoFragment;
 import com.example.doannd.hci_2018_forestmanagement.fragments.ProfileChangePassword;
 import com.example.doannd.hci_2018_forestmanagement.fragments.ProfileHistory;
+import com.example.doannd.hci_2018_forestmanagement.fragments.TongHopFragment;
 
 public class ActionActivity extends BaseActivity {
 
@@ -58,6 +59,9 @@ public class ActionActivity extends BaseActivity {
                 case 2:
                     ActionReportFragment tab3=new ActionReportFragment();
                     return tab3;
+                case 3:
+                    TongHopFragment tab4=new TongHopFragment();
+                    return tab4;
                 default:
                     return null;
             }
