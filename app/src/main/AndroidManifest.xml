@@ -9,6 +9,8 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -26,11 +28,11 @@
         </activity>
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.ProfileActivity" />
-        <activity android:name=".activities.DroneActivity" />
+        <activity android:name=".activities.DroneListActivity" />
         <activity android:name=".activities.ActionActivity" />
         <activity android:name=".activities.AnalyzeActivity" />
         <activity android:name=".activities.UsersActivity" />
-        <activity android:name=".DroneDetaillActivity" />
+        <activity android:name=".ActivityDroneDetail" />
         <activity android:name=".activities.UserDetailActivity" />
 
         <meta-data
@@ -44,7 +46,8 @@
             android:name=".ActivityConfigDrone"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity android:name=".activities.VideoDetail" />
-        <activity android:name=".activities.NewUserActivity"></activity>
+        <activity android:name=".activities.NewUserActivity" />
+        <activity android:name=".ActivityControlDrone"></activity>
     </application>
 
 </manifest>

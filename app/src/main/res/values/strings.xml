@@ -1,7 +1,9 @@
 <resources>
     <string name="bnb_logout">Đăng xuất</string>
     <string name="bnb_setting">Cài đặt</string>
+    <string name="bnb_reset_database">Khởi tạo lại dữ liệu Drone</string>
 
+    <string name="data_base_name">drone_list.sqlite</string>
     <!--Map-->
     <string name="app_name">Quản lý rừng</string>
     <string name="bnb_forest">Map</string>
@@ -28,6 +30,12 @@
         <item>20m</item>
         <item>25m</item>
     </string-array>
+    <string-array name="spinnerDroneTime">
+        <item>30p</item>
+        <item>45p</item>
+        <item>60p</item>
+        <item>90p</item>
+    </string-array>
 
     <!--User Profile-->
     <string name="tab_text_1">Thông tin</string>
@@ -37,10 +45,23 @@
     <string name="bnb_updateProfile">Update Profile</string>
 
     <!--Drone-->
-    <string name="title_activity_drone">DroneActivity</string>
-    <string name="tab_drone_1">Hoạt động</string>
-    <string name="tab_drone_2">Đang rảnh</string>
-    <string name="tab_drone_3">Bảo trì</string>
+    <string name="bundleDroneStaus">droneStatus</string>
+    <string name="bundleDroneInfo">droneInfo</string>
+    <string name="id">Id:</string>
+    <string name="drone_id">Id:</string>
+    <string name="drone_model">Model:</string>
+    <string name="drone_mfg">Ngày SX:</string>
+    <string name="drone_status">Trạng thái:</string>
+    <string name="drone_energy">Năng lượng:</string>
+    <string name="drone_user">Người giám sát:</string>
+    <string name="drone_pos">Tọa độ:</string>
+    <string name="drone_height">Độ cao:</string>
+    <string name="drone_time">Thời gian bay:</string>
+
+    <string name="d">DroneActivity</string>
+    <string name="tab_drone_monitor">Giám sát</string>
+    <string name="tab_drone_free">Đang rảnh</string>
+    <string name="tab_drone_maintenance">Bảo trì</string>
 
     <string name="tab_users_1">Danh sách</string>
     <string name="tab_users_2">Thêm tài khoản</string>

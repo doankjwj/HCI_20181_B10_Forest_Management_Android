@@ -1,13 +1,17 @@
 package com.example.doannd.hci_2018_forestmanagement.activities;
 
 import android.Manifest;
+import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.ActionBar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -15,6 +19,9 @@ import android.widget.Toast;
 
 import com.example.doannd.hci_2018_forestmanagement.ActivitySelectDrone;
 import com.example.doannd.hci_2018_forestmanagement.Data.Area;
+import com.example.doannd.hci_2018_forestmanagement.Data.Drone;
+import com.example.doannd.hci_2018_forestmanagement.DataBase.AppDataBase;
+import com.example.doannd.hci_2018_forestmanagement.Function.DroneUltis;
 import com.example.doannd.hci_2018_forestmanagement.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -24,12 +31,18 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.Random;
+
+import javax.xml.transform.OutputKeys;
+
+
+
 public class MainActivity extends BaseActivity implements
         GoogleMap.OnMyLocationButtonClickListener,
 //        GoogleMap.OnMyLocationClickListener,
         OnMapReadyCallback {
 
-    private ActionBar toolbar;
+    private android.support.v7.app.ActionBar toolbar;
 
     FusedLocationProviderClient fusedLocationProviderClient;
     GoogleMap mMap;
@@ -46,6 +59,8 @@ public class MainActivity extends BaseActivity implements
     private final int MAP_DEFAULT_ZOOM = 15;
     private final float MAP_SCALE = (float) 1042.43;
 
+    AppDataBase mAppDataBase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +71,7 @@ public class MainActivity extends BaseActivity implements
         reference();
         settingBottom();
         initMap();
+        initDataBase();
     }
 
     private void reference() {
@@ -137,14 +153,12 @@ public class MainActivity extends BaseActivity implements
         layoutLimited = (ConstraintLayout) findViewById(R.id.layoutLimitted);
         layoutLimited.setVisibility(View.INVISIBLE);
     }
-
     private void onOk() {
         Intent intent = new Intent(MainActivity.this, ActivitySelectDrone.class);
         Area area = getAreaInfo();
         intent.putExtra(String.valueOf(getResources().getString(R.string.intentKey)), area);
         startActivity(intent);
     }
-
     private Area getAreaInfo()
     {
         LatLng latLng = mMap.getCameraPosition().target;
@@ -158,7 +172,6 @@ public class MainActivity extends BaseActivity implements
         Area area = new Area(latitude, longitude, width, height, size);
         return area;
     };
-
     private void onCrop()
     {
         btnCrop.setVisibility(View.INVISIBLE);
@@ -182,17 +195,10 @@ public class MainActivity extends BaseActivity implements
         isCropping = false;
         toolbar.setTitle(getResources().getString(R.string.toolBarMap_0));
     }
-
     private void initMap() {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentMap);
         mapFragment.getMapAsync(this);
     }
-
-    private void moveCamera(LatLng latLng, float zoom)
-    {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
-    };
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
@@ -205,16 +211,16 @@ public class MainActivity extends BaseActivity implements
             return;
         };
 
-        MarkerOptions markerOptions = new MarkerOptions()
-                .title(String.valueOf("Vị trí hiện tại"))
-                .snippet(String.valueOf("21.003052 : 105.846670"))
-                .position(latLng);
-        mMap.addMarker(markerOptions);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, MAP_DEFAULT_ZOOM));
-
+//        MarkerOptions markerOptions = new MarkerOptions()
+//                .title(String.valueOf("Vị trí hiện tại"))
+//                .snippet(String.valueOf("21.003052 : 105.846670"))
+//                .position(latLng);
+//        mMap.addMarker(markerOptions);
+//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, MAP_DEFAULT_ZOOM));
+//
         mMap.setMyLocationEnabled(true);
         mMap.setOnMyLocationButtonClickListener(this);
-        
+//
         initThreadControlZoom();
     }
 
@@ -228,6 +234,8 @@ public class MainActivity extends BaseActivity implements
                 {
                     if (isCropping)
                     {
+                        if (layoutLimited.getVisibility() == View.INVISIBLE)
+                            onVibrate();
                         layoutLimited.setVisibility(View.VISIBLE);
                         btnConstraint.setVisibility(View.VISIBLE);
                     }
@@ -255,10 +263,53 @@ public class MainActivity extends BaseActivity implements
             }
         }, 250);
     }
-
+    public void onVibrate()
+    {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(500);
+    }
     @Override
     public boolean onMyLocationButtonClick() {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, mMap.getCameraPosition().zoom));
-        return true;
+//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, mMap.getCameraPosition().zoom));
+        return false;
+    }
+
+    private void initDataBase() {
+//        DroneUltis.initDataBase(getApplicationContext(), 30);
+        mAppDataBase = new AppDataBase(MainActivity.this, getResources().getString(R.string.data_base_name), null, 1);
+        mAppDataBase.queryData("CREATE TABLE IF NOT EXISTS Drone(Id INTEGER PRIMARY KEY AUTOINCREMENT, Model STRING, Mfg DATE, Status INTEGER, Energy INTEGER, UserControlling STRING, Latitude FLOAT, Longitude FLOAT, Height INTEGER, SPEED INTEGER, TIME STRING)");
+    }
+
+    private void resetDataBase() {
+        mAppDataBase.queryData("CREATE TABLE IF NOT EXISTS Drone(Id INTEGER PRIMARY KEY AUTOINCREMENT, Model STRING, Mfg DATE, Status INTEGER, Energy INTEGER, UserControlling STRING, Latitude FLOAT, Longitude FLOAT, Height INTEGER, SPEED INTEGER, TIME STRING)");
+        dropDatabase("Drone");
+        mAppDataBase.queryData("CREATE TABLE IF NOT EXISTS Drone(Id INTEGER PRIMARY KEY AUTOINCREMENT, Model STRING, Mfg DATE, Status INTEGER, Energy INTEGER, UserControlling STRING, Latitude FLOAT, Longitude FLOAT, Height INTEGER, SPEED INTEGER, TIME STRING)");
+    }
+
+    private void fillTableDrone(int numRecord) {
+        Random random = new Random();
+        for (int i=0; i<numRecord; i++)
+        {
+            String model = "DR" + String.valueOf(random.nextInt(2018));
+            String year = "2018";
+            String month = String.valueOf(random.nextInt(12) + 1);
+            String day = String.valueOf(random.nextInt(30) + 1);
+            String date = year + "/" + month + "/" + day;
+            int status = random.nextInt(3);
+            int energy = random.nextInt(101);
+            int userController = random.nextInt(1000);
+            float latitude = random.nextFloat() * 90 * (random.nextFloat() > 0.5 ? 1 : -1);
+            float longitude = random.nextFloat() * 180 * (random.nextFloat() > 0.5 ? 1 : -1);
+
+            String sql = "INSERT INTO Drone VALUES(null, '" + model + "', '" + date + "', '" + status + "', '"
+                    + energy + "', '" + userController + "', '" + latitude + "', '" + longitude + "')";
+
+            mAppDataBase.queryData(sql);
+        }
+    }
+
+    private void dropDatabase(String table)
+    {
+        mAppDataBase.queryData("DROP TABLE " + table);
     }
 }

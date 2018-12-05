@@ -10,8 +10,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.Menu;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toolbar;
 
+import com.example.doannd.hci_2018_forestmanagement.Function.DroneUltis;
 import com.example.doannd.hci_2018_forestmanagement.LoginActivity;
 import com.example.doannd.hci_2018_forestmanagement.R;
 
@@ -36,6 +36,9 @@ public class BaseActivity extends AppCompatActivity{
                 sharedPref.edit().clear().commit();
                 Intent intent=new Intent(BaseActivity.this, LoginActivity.class);
                 startActivity(intent);
+                return true;
+            case R.id.bnb_resetDataBase:
+                DroneUltis.initDataBase(getApplicationContext(), 30);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -110,7 +113,7 @@ public class BaseActivity extends AppCompatActivity{
                     return true;
                 case R.id.bnb_drone:
                     saveabc("drone");
-                    intent=new Intent(BaseActivity.this, DroneActivity.class);
+                    intent=new Intent(BaseActivity.this, DroneListActivity.class);
                     startActivity(intent);
                     return true;
                 case R.id.bnb_action:

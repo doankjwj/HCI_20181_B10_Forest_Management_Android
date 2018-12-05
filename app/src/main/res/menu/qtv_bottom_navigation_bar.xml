@@ -7,7 +7,7 @@
 
     <item
         android:id="@+id/bnb_drone"
-        android:icon="@drawable/bnb_drone"
+        android:icon="@drawable/drone"
         android:title="@string/bnb_drone" />
 
     <item

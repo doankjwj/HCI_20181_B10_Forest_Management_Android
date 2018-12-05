@@ -1,8 +1,8 @@
 package com.example.doannd.hci_2018_forestmanagement;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
@@ -14,7 +14,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.doannd.hci_2018_forestmanagement.Data.Area;
-import com.example.doannd.hci_2018_forestmanagement.Function.StringUtls;
+import com.example.doannd.hci_2018_forestmanagement.Data.Drone;
+import com.example.doannd.hci_2018_forestmanagement.DataBase.AppDataBase;
+import com.example.doannd.hci_2018_forestmanagement.Function.Const;
+import com.example.doannd.hci_2018_forestmanagement.Function.Distance;
+import com.example.doannd.hci_2018_forestmanagement.Function.DroneUltis;
 
 public class ActivitySelectDrone extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -60,6 +64,7 @@ public class ActivitySelectDrone extends AppCompatActivity implements AdapterVie
                 {
                     Intent intent = new Intent(ActivitySelectDrone.this, ActivityConfigDrone.class);
                     intent.putExtra("areaConfig", area);
+                    intent.putExtra("droneInfo", getDroneNearest(area));
                     startActivity(intent);
                 }
                 else
@@ -82,5 +87,36 @@ public class ActivitySelectDrone extends AppCompatActivity implements AdapterVie
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    private Drone getDroneNearest(Area area)
+    {
+        Drone drone;
+        int droneId = 0;
+        float areaLatitude = area.getLatitude();
+        float areaLongitude = area.getLongitude();
+        float disMin = Float.MAX_VALUE;
+
+        AppDataBase mAppDataBase = new AppDataBase(ActivitySelectDrone.this, getResources().getString(R.string.data_base_name), null, 1);
+
+        String sql = "SELECT * FROM Drone WHERE Status == '" + Const.DRONE_STATUS_FREE + "'";
+        Cursor cursor = mAppDataBase.getData(sql);
+        while (cursor.moveToNext())
+        {
+            float droneLatitude = cursor.getFloat(6);
+            float droneLongitude = cursor.getFloat(7);
+            float dis = Distance.distance(areaLatitude, areaLongitude, droneLatitude, droneLongitude);
+            if (dis < disMin)
+            {
+                disMin = dis;
+                droneId = cursor.getInt(0);
+            };
+        };
+
+        sql = "SELECT * FROM Drone WHERE id == '" + droneId + "'";
+        cursor = mAppDataBase.getData(sql);
+        cursor.moveToNext();
+        drone = DroneUltis.createDroneByCursor(cursor);
+        return drone;
     }
 }
