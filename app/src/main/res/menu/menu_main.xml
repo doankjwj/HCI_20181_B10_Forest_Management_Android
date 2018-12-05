@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.doannd.hci_2018_forestmanagement.activities.MainActivity">
 
-    <item
-        android:id="@+id/bnb_setting"
-        android:orderInCategory="100"
-        android:title="@string/bnb_setting"
-        app:showAsAction="never" />
+    <!--<item-->
+        <!--android:id="@+id/bnb_setting"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/bnb_setting"-->
+        <!--app:showAsAction="never" />-->
 
     <item
         android:id="@+id/bnb_logout"

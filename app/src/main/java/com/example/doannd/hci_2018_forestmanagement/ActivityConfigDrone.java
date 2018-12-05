@@ -67,11 +67,13 @@ public class ActivityConfigDrone extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        Drone newDrone = DroneUltis.createDroneById(getApplicationContext(), drone.getId());
                         Intent intent = new Intent(getApplicationContext(), ActivityDroneDetail.class);
-                        intent.putExtra(getApplicationContext().getResources().getString(R.string.bundleDroneInfo), drone);
+                        intent.putExtra(getApplicationContext().getResources().getString(R.string.bundleDroneInfo), newDrone);
+                        intent.putExtra("isFromList", false);
                         startActivity(intent);
                     }
-                }, 2000);
+                }, 1000);
 
             }
         });

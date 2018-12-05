@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.doannd.hci_2018_forestmanagement.Data.Drone;
 import com.example.doannd.hci_2018_forestmanagement.Function.Const;
 import com.example.doannd.hci_2018_forestmanagement.Function.StringUtls;
+import com.example.doannd.hci_2018_forestmanagement.activities.MainActivity;
 
 public class ActivityDroneDetail extends AppCompatActivity {
 
@@ -19,14 +20,17 @@ public class ActivityDroneDetail extends AppCompatActivity {
     ImageView imgForest;
 
     Drone drone;
+    boolean isFromList = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drone_detaill);
 
+        getSupportActionBar().setTitle("Drone");
         Intent intent = getIntent();
         drone = (Drone) intent.getSerializableExtra(getApplicationContext().getResources().getString(R.string.bundleDroneInfo));
+        isFromList = intent.getBooleanExtra("isFromList", true);
         reference();
         matchData();
     }
@@ -101,11 +105,28 @@ public class ActivityDroneDetail extends AppCompatActivity {
             btnConfig.setVisibility(View.INVISIBLE);
             imgForest.setVisibility(View.VISIBLE);
         }
-        else
+        if (drone.getStatus() == Const.DRONE_STATUS_FREE)
         {
             btnView.setVisibility(View.INVISIBLE);
             btnConfig.setVisibility(View.VISIBLE);
             imgForest.setVisibility(View.INVISIBLE);
         }
+        if (drone.getStatus() == Const.DRONE_STATUS_MAINTENANCE)
+        {
+            btnView.setVisibility(View.INVISIBLE);
+            btnConfig.setVisibility(View.INVISIBLE);
+            imgForest.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (isFromList)
+        {
+            finish();
+        }
+        else
+            startActivity(new Intent(ActivityDroneDetail.this, MainActivity.class));
     }
 }

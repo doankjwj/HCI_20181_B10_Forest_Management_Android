@@ -12,7 +12,7 @@ import android.view.Menu;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.doannd.hci_2018_forestmanagement.Function.DroneUltis;
-import com.example.doannd.hci_2018_forestmanagement.LoginActivity;
+import com.example.doannd.hci_2018_forestmanagement.activities.LoginActivity;
 import com.example.doannd.hci_2018_forestmanagement.R;
 
 public class BaseActivity extends AppCompatActivity{
@@ -29,8 +29,8 @@ public class BaseActivity extends AppCompatActivity{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.bnb_setting:
-                return true;
+//            case R.id.bnb_setting:
+//                return true;
             case R.id.bnb_logout:
                 SharedPreferences sharedPref = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
                 sharedPref.edit().clear().commit();
@@ -52,48 +52,45 @@ public class BaseActivity extends AppCompatActivity{
         if (username=="kiemlam"){
             navigation.inflateMenu(R.menu.bottom_navigation_bar);
         }
-        else if(username=="quantrivien"){
+        String usertype=sharedPref.getString("usertype","");
+        if (usertype.equals("kiemlam")){
+            navigation.inflateMenu(R.menu.bottom_navigation_bar);
+        }
+        else if(usertype.equals("quantrivien")){
             navigation.inflateMenu(R.menu.qtv_bottom_navigation_bar);
         }
-//        else if (username=="phantichvien"){
-//            navigation.inflateMenu(R.menu.ptv_bottom_navigation_bar);
-//        }
         else{
             navigation.inflateMenu(R.menu.bottom_navigation_bar);
         }
 
-        Intent intent = getIntent();
-        if (intent.getStringExtra("currentMenuItem") != null)
-        {
 
+        Intent intent = getIntent();
+        String menuItem=intent.getStringExtra("currentMenuItem");
+        if (menuItem != null)
+        {
+            switch(menuItem){
+                case "forest":
+                    navigation.setSelectedItemId(R.id.bnb_forest);
+                    break;
+                case "drone":
+                    navigation.setSelectedItemId(R.id.bnb_drone);
+                    break;
+                case "action":
+                    navigation.setSelectedItemId(R.id.bnb_action);
+                    break;
+                case "profile":
+                    navigation.setSelectedItemId(R.id.bnb_profile);
+                    break;
+                case "users":
+                    navigation.setSelectedItemId(R.id.bnb_admin_tool);
+                    break;
+                default:
+                    navigation.setSelectedItemId(R.id.bnb_forest);
+                    break;
+            }
         }
         else
             navigation.setSelectedItemId(R.id.bnb_forest);
-
-//        String abc=sharedPref.getString("abc","");
-//        switch(abc){
-//            case "forest":
-//                navigation.setSelectedItemId(R.id.bnb_forest);
-//                break;
-//            case "drone":
-//                navigation.setSelectedItemId(R.id.bnb_drone);
-//                break;
-//            case "action":
-//                navigation.setSelectedItemId(R.id.bnb_action);
-//                break;
-//            case "profile":
-//                navigation.setSelectedItemId(R.id.bnb_profile);
-//                break;
-//            case "users":
-//                navigation.setSelectedItemId(R.id.bnb_admin_tool);
-//                break;
-//            case "analyze":
-//                navigation.setSelectedItemId(R.id.bnb_analyze);
-//                break;
-//            default:
-//                navigation.setSelectedItemId(R.id.bnb_forest);
-//                break;
-//        }
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
@@ -109,16 +106,19 @@ public class BaseActivity extends AppCompatActivity{
                     saveabc("forest");
                     toolBar.setTitle(R.string.toolBarMap_0);
                     intent=new Intent(BaseActivity.this, MainActivity.class);
+//                    intent.putExtra("currentMenuItem", "forest");
                     startActivity(intent);
                     return true;
                 case R.id.bnb_drone:
                     saveabc("drone");
                     intent=new Intent(BaseActivity.this, DroneListActivity.class);
+//                    intent.putExtra("currentMenuItem", "drone");
                     startActivity(intent);
                     return true;
                 case R.id.bnb_action:
                     saveabc("action");
                     intent=new Intent(BaseActivity.this, ActionActivity.class);
+//                    intent.putExtra("currentMenuItem", "action");
                     startActivity(intent);
                     return true;
                 case R.id.bnb_profile:

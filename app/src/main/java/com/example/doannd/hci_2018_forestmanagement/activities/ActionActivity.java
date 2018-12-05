@@ -31,6 +31,7 @@ public class ActionActivity extends BaseActivity {
         Intent intent = getIntent();
         intent.putExtra("currentMenuItem","action");
 
+        getSupportActionBar().setTitle("Phân tích + Báo cáo");
         settingBottom();
 
         mSectionsPagerAdapter =new ActionActivity.SectionsPagerAdapter(getSupportFragmentManager());

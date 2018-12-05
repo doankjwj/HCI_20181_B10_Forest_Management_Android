@@ -26,6 +26,7 @@ public class ProfileActivity extends BaseActivity {
         Intent intent = getIntent();
         intent.putExtra("currentMenuItem","profile");
 
+        getSupportActionBar().setTitle("Thông tin cá nhân");
         settingBottom();
 
         mSectionsPagerAdapter =new SectionsPagerAdapter(getSupportFragmentManager());

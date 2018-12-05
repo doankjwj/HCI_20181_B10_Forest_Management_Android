@@ -13,6 +13,14 @@ import com.example.doannd.hci_2018_forestmanagement.activities.MainActivity;
 import java.util.Random;
 
 public class DroneUltis {
+    public static Drone createDroneById(Context context, int droneId)
+    {
+        AppDataBase appDataBase = new AppDataBase(context,context.getResources().getString(R.string.data_base_name), null, 1);
+        String sql = "SELECT * FROM Drone WHERE Id = '" + droneId + "'";
+        Cursor cursor = appDataBase.getData(sql);
+        cursor.moveToNext();
+        return createDroneByCursor(cursor);
+    };
     public static Drone createDroneByCursor(Cursor cursor)
     {
         int id = cursor.getInt(0);

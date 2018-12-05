@@ -30,6 +30,10 @@ public class Drone implements Serializable {
         this.time = time;
     }
 
+    public Drone() {
+
+    }
+
     public int getId() {
         return id;
     }

@@ -6,6 +6,12 @@ public class StringUtls {
         length = Math.min(length, s.length());
         return s.substring(0, length-1);
     }
+    public static String strCat(Float n, int length)
+    {
+        String s = String.valueOf(n);
+        length = Math.min(length, s.length());
+        return s.substring(0, length-1);
+    }
     public static String longString(String s, int length, char deli, boolean toLeft)
     {
         if (s.length() >= length)

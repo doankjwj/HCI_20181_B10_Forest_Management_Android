@@ -18,6 +18,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.doannd.hci_2018_forestmanagement.Data.Drone;
+import com.example.doannd.hci_2018_forestmanagement.Function.Const;
+import com.example.doannd.hci_2018_forestmanagement.Function.Ultis;
 
 import java.io.IOException;
 
@@ -28,8 +30,8 @@ public class ActivityControlDrone extends AppCompatActivity {
     ShowCamera showCamera;
 
     ImageButton btnAuto, btnHand, btnLeft, btnRight, btnFront, btnBack, btnUp, btnDown;
-    TextView txtStatus, txtLatitude, txtLongitude, txtForward, txtHeight, txtSpeed;
-    ConstraintLayout layoutControl;
+    TextView txtStatus, txtLatitude, txtLongitude, txtForward, txtHeight, txtSpeed, txtLimited;
+    ConstraintLayout layoutControl, layoutLimited;
 
     Drone drone;
     boolean isHanding = false;
@@ -51,6 +53,8 @@ public class ActivityControlDrone extends AppCompatActivity {
 
         matchData();
 
+        getSupportActionBar().setTitle("Giám sát Drone");
+
         camera = Camera.open();
         showCamera = new ShowCamera(getApplicationContext(), camera);
         frameLayout.addView(showCamera);
@@ -59,6 +63,8 @@ public class ActivityControlDrone extends AppCompatActivity {
     private void reference() {
         frameLayout = (FrameLayout) findViewById(R.id.frameLayout);
 
+        layoutLimited = (ConstraintLayout) findViewById(R.id.layoutLimitted);
+        layoutLimited.setVisibility(View.INVISIBLE);
         layoutControl = (ConstraintLayout) findViewById(R.id.layOutControl);
         btnAuto = (ImageButton) findViewById(R.id.btnAuto);
         btnAuto.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +89,7 @@ public class ActivityControlDrone extends AppCompatActivity {
         txtForward = (TextView) findViewById(R.id.txtForward);
         txtHeight = (TextView) findViewById(R.id.txtHeight);
         txtSpeed = (TextView) findViewById(R.id.txtSpeed);
+        txtLimited = (TextView) findViewById(R.id.txtLimitted);
 
         btnFront = (ImageButton) findViewById(R.id.btnFront);
         btnFront.setOnClickListener(new View.OnClickListener() {
@@ -154,9 +161,12 @@ public class ActivityControlDrone extends AppCompatActivity {
             public void onClick(View v) {
                 if (height+1 >= 26)
                 {
-                    Toast.makeText(getApplicationContext(), "Đạt độ cao tối đa: 40m", Toast.LENGTH_SHORT ).show();
+                    Ultis.onVibrate(getApplicationContext());
+                    layoutLimited.setVisibility(View.VISIBLE);
+                    txtLimited.setText("Độ cao cho phép Max: 25m" );
                     return;
                 }
+                layoutLimited.setVisibility(View.INVISIBLE);
                 height ++;
                 matchData();
             }
@@ -167,9 +177,12 @@ public class ActivityControlDrone extends AppCompatActivity {
             public void onClick(View v) {
                 if (height-1 <= 9)
                 {
-                    Toast.makeText(getApplicationContext(), "Đạt độ cao tối thiểu: 10m", Toast.LENGTH_SHORT ).show();
+                    Ultis.onVibrate(getApplicationContext());
+                    layoutLimited.setVisibility(View.VISIBLE);
+                    txtLimited.setText("Độ cao cho phép Min: 10m" );
                     return;
                 }
+                layoutLimited.setVisibility(View.INVISIBLE);
                 height --;
                 matchData();
             }

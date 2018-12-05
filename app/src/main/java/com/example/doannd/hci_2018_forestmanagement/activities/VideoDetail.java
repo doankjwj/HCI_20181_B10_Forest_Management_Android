@@ -1,6 +1,7 @@
 package com.example.doannd.hci_2018_forestmanagement.activities;
 
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,8 @@ public class VideoDetail extends AppCompatActivity {
     private TextView tvVideoID,tvDroneID,tvKhuVucID,tvNgay,tvTime,tvHeight,tvNumWarning;
     private Button btnAnalyze;
 
+    ConstraintLayout layoutResult;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,8 @@ public class VideoDetail extends AppCompatActivity {
 
         Intent data = getIntent();
 
+        layoutResult = (ConstraintLayout) findViewById(R.id.layoutResult);
+        layoutResult.setVisibility(View.INVISIBLE);
         tvVideoID=(TextView) findViewById(R.id.tvVideoID);
         tvDroneID=(TextView) findViewById(R.id.tvDroneID);
         tvKhuVucID=(TextView) findViewById(R.id.tvKhuVucID);
@@ -38,11 +43,13 @@ public class VideoDetail extends AppCompatActivity {
         tvHeight.setText(data.getStringExtra("height"));
         tvNumWarning.setText(data.getStringExtra("warning"));
 
+
         btnAnalyze=(Button) findViewById(R.id.btnAnalyze);
         btnAnalyze.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                layoutResult.setVisibility(View.VISIBLE);
+                btnAnalyze.setText("Đã Phân Tích");
             }
         });
     }

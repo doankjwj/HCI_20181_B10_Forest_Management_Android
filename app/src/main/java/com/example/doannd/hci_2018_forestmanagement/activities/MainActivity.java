@@ -15,6 +15,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.doannd.hci_2018_forestmanagement.ActivitySelectDrone;
@@ -22,6 +24,7 @@ import com.example.doannd.hci_2018_forestmanagement.Data.Area;
 import com.example.doannd.hci_2018_forestmanagement.Data.Drone;
 import com.example.doannd.hci_2018_forestmanagement.DataBase.AppDataBase;
 import com.example.doannd.hci_2018_forestmanagement.Function.DroneUltis;
+import com.example.doannd.hci_2018_forestmanagement.Function.StringUtls;
 import com.example.doannd.hci_2018_forestmanagement.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -53,6 +56,8 @@ public class MainActivity extends BaseActivity implements
     ImageButton btnCrop, btnCancel, btnOk, btnConstraint, btnZoomIn, btnZoomOut;
     ImageView imgFrame, imgFrameCenter;
     ConstraintLayout layoutLimited;
+    LinearLayout layoutInfo;
+    TextView txtLatitude, txtLongitude, txtZoom;
 
     private final int MAP_ZOOM_MAX = 19;
     private final int MAP_ZOOM_MIN = 13;
@@ -152,6 +157,12 @@ public class MainActivity extends BaseActivity implements
 
         layoutLimited = (ConstraintLayout) findViewById(R.id.layoutLimitted);
         layoutLimited.setVisibility(View.INVISIBLE);
+        layoutInfo = (LinearLayout) findViewById(R.id.layoutInfo);
+        layoutInfo.setVisibility(View.INVISIBLE);
+        txtLatitude = (TextView) findViewById(R.id.txtLatitude);
+        txtLongitude = (TextView) findViewById(R.id.txtLongitude);
+        txtZoom = (TextView) findViewById(R.id.txtZoom);
+
     }
     private void onOk() {
         Intent intent = new Intent(MainActivity.this, ActivitySelectDrone.class);
@@ -178,6 +189,7 @@ public class MainActivity extends BaseActivity implements
         btnOk.setVisibility(View.VISIBLE);
         btnCancel.setVisibility(View.VISIBLE);
         imgFrame.setVisibility(View.VISIBLE);
+        layoutInfo.setVisibility(View.VISIBLE);
         imgFrameCenter.setVisibility(View.VISIBLE);
         if (!alerted)
             Toast.makeText(MainActivity.this, "Khoanh vùng thả Drone vào khung xanh", Toast.LENGTH_SHORT).show();
@@ -191,6 +203,7 @@ public class MainActivity extends BaseActivity implements
         btnOk.setVisibility(View.INVISIBLE);
         btnCancel.setVisibility(View.INVISIBLE);
         imgFrame.setVisibility(View.INVISIBLE);
+        layoutInfo.setVisibility(View.INVISIBLE);
         imgFrameCenter.setVisibility(View.INVISIBLE);
         isCropping = false;
         toolbar.setTitle(getResources().getString(R.string.toolBarMap_0));
@@ -259,6 +272,9 @@ public class MainActivity extends BaseActivity implements
                         btnOk.setVisibility(View.INVISIBLE);
                     }
                 }
+                txtLatitude.setText("Vĩ độ: " + StringUtls.strCat((float) mMap.getCameraPosition().target.latitude, 7) + "");
+                txtLongitude.setText("Kinh độ: " + StringUtls.strCat((float) mMap.getCameraPosition().target.longitude, 7) + "");
+                txtZoom.setText("Map Zoom: " + StringUtls.strCat(mMap.getCameraPosition().zoom, 7) + "");
                 handler.postDelayed(this, 250);
             }
         }, 250);
