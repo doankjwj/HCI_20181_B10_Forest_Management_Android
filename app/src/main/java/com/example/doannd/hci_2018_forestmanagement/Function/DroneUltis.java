@@ -79,7 +79,7 @@ public class DroneUltis {
             String date = year + "/" + month + "/" + day;
 //            int status = random.nextInt(3);
             int status = random.nextInt(2) + 1;
-            int energy = random.nextInt(101);
+            int energy = random.nextInt(51) + 50;
             int userController = random.nextInt(1000);
             float latitude = random.nextFloat() * 90 * (random.nextFloat() > 0.5 ? 1 : -1);
             float longitude = random.nextFloat() * 180 * (random.nextFloat() > 0.5 ? 1 : -1);

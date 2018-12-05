@@ -85,7 +85,39 @@ public class ActivityControlDrone extends AppCompatActivity {
         txtSpeed = (TextView) findViewById(R.id.txtSpeed);
 
         btnFront = (ImageButton) findViewById(R.id.btnFront);
+        btnFront.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (droneForward != 0)
+                {
+                    latitude += 0.01 * droneForward;
+                    longitude += 0.01 * droneForward;
+                }
+                else
+                {
+                    latitude += 0.02;
+                    longitude += 0.02;
+                }
+                matchData();
+            }
+        });
         btnBack = (ImageButton) findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (droneForward != 0)
+                {
+                    latitude += 0.01 * droneForward;
+                    longitude += 0.01 * droneForward;
+                }
+                else
+                {
+                    latitude += 0.02;
+                    longitude += 0.02;
+                }
+                matchData();
+            }
+        });
         btnLeft = (ImageButton) findViewById(R.id.btnLeft);
         btnLeft.setOnClickListener(new View.OnClickListener() {
             @Override

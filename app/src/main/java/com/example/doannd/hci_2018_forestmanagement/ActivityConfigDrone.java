@@ -3,6 +3,7 @@ package com.example.doannd.hci_2018_forestmanagement;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -61,7 +62,17 @@ public class ActivityConfigDrone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 registerDrone();
-                Toast.makeText(ActivityConfigDrone.this, currentHeight + " " + currentTime, Toast.LENGTH_SHORT).show();
+
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(getApplicationContext(), ActivityDroneDetail.class);
+                        intent.putExtra(getApplicationContext().getResources().getString(R.string.bundleDroneInfo), drone);
+                        startActivity(intent);
+                    }
+                }, 2000);
+
             }
         });
     }
