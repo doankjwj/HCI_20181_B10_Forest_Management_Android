@@ -62,10 +62,10 @@ public class ProfileUpdate extends Fragment {
                     hoten=edtHoTen.getText().toString().trim();
                     birthday=edtBirthDay.getText().toString().trim();
                     db.updateUser(new User(username,password,usertype,hoten,birthday));
-                    SharedPreferences sharedPref = getContext().getSharedPreferences("userInfo", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor=sharedPref.edit();
-                    editor.putString("password",newPass);
-                    editor.apply();
+//                    SharedPreferences sharedPref = getContext().getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+//                    SharedPreferences.Editor editor=sharedPref.edit();
+//                    editor.putString("password",newPass);
+//                    editor.apply();
                     Toast.makeText(getContext(), "Cập nhật thành công!", Toast.LENGTH_LONG).show();
                 }
             }
