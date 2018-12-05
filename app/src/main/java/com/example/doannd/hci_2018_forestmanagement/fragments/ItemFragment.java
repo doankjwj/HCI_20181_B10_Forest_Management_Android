@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.doannd.hci_2018_forestmanagement.MyItemRecyclerViewAdapter;
+import com.example.doannd.hci_2018_forestmanagement.adapters.MyItemRecyclerViewAdapter;
 import com.example.doannd.hci_2018_forestmanagement.R;
 import com.example.doannd.hci_2018_forestmanagement.dummy.DummyContent;
 import com.example.doannd.hci_2018_forestmanagement.dummy.DummyContent.DummyItem;

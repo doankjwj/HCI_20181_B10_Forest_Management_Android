@@ -7,11 +7,11 @@
 
     <TextView
         android:id="@+id/tvOldPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="64dp"
         android:gravity="fill_vertical"
         android:text="Mật khẩu cũ"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,25 +23,26 @@
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOldPass" />
+        app:layout_constraintStart_toEndOf="@+id/tvOldPass"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvNewPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:gravity="fill_vertical"
         android:text="Mật khẩu mới"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtOldPass" />
+        app:layout_constraintTop_toBottomOf="@+id/tvOldPass" />
 
     <EditText
         android:id="@+id/edtNewPass"
@@ -52,22 +53,23 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNewPass" />
+        app:layout_constraintStart_toEndOf="@+id/tvNewPass"
+        app:layout_constraintTop_toBottomOf="@+id/edtOldPass" />
 
     <TextView
         android:id="@+id/tvNewAgain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:gravity="fill_vertical"
         android:text="Nhập lại mật khẩu mới"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtNewPass" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNewPass" />
 
     <EditText
         android:id="@+id/edtNewAgain"
@@ -78,10 +80,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNewAgain" />
+        app:layout_constraintStart_toEndOf="@+id/tvNewAgain"
+        app:layout_constraintTop_toBottomOf="@+id/edtNewPass" />
 
     <Button
         android:id="@+id/btnChange"
@@ -107,7 +110,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="fill_vertical"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnChange" />

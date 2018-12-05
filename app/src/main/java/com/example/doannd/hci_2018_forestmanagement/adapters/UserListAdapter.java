@@ -6,11 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.doannd.hci_2018_forestmanagement.R;
-import com.example.doannd.hci_2018_forestmanagement.User;
+import com.example.doannd.hci_2018_forestmanagement.model.User;
 
 import java.util.List;
 
