@@ -1,12 +1,16 @@
 package com.example.doannd.hci_2018_forestmanagement;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.example.doannd.hci_2018_forestmanagement.Data.Drone;
 import com.example.doannd.hci_2018_forestmanagement.Function.Const;
@@ -18,6 +22,7 @@ public class ActivityDroneDetail extends AppCompatActivity {
     TextView txtId, txtModel, txtMfg, txtStatus, txtUserControlling, txtEnergy, txtPosition, txtHeight, txtSpeed;
     Button btnHistory, btnView, btnConfig;
     ImageView imgForest;
+    VideoView videoView;
 
     Drone drone;
     boolean isFromList = true;
@@ -42,7 +47,7 @@ public class ActivityDroneDetail extends AppCompatActivity {
         txtUserControlling = (TextView)findViewById(R.id.txtUserControlling);
         txtEnergy = (TextView)findViewById(R.id.txtEnergy);
         txtPosition = (TextView)findViewById(R.id.txtPosition);
-        txtHeight = (TextView)findViewById(R.id.txtHeight);
+        txtHeight = (TextView)findViewById(R.id.txtTime);
         txtSpeed = (TextView)findViewById(R.id.txtSpeed);
 
         btnHistory = (Button)findViewById(R.id.btnHistory);
@@ -58,6 +63,7 @@ public class ActivityDroneDetail extends AppCompatActivity {
         });
 
         imgForest = (ImageView)findViewById(R.id.imgForest);
+        videoView = (VideoView)findViewById(R.id.videoView);
     }
     private void matchData()
     {
@@ -104,6 +110,7 @@ public class ActivityDroneDetail extends AppCompatActivity {
             btnView.setVisibility(View.VISIBLE);
             btnConfig.setVisibility(View.INVISIBLE);
             imgForest.setVisibility(View.VISIBLE);
+            playVideo();
         }
         if (drone.getStatus() == Const.DRONE_STATUS_FREE)
         {
@@ -119,6 +126,18 @@ public class ActivityDroneDetail extends AppCompatActivity {
         }
     }
 
+    private void playVideo() {
+        String path = "android.resource://" + getPackageName() + "/raw/forest_gif";
+        videoView.setVideoURI(Uri.parse(path));
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+        videoView.start();
+    }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -128,5 +147,11 @@ public class ActivityDroneDetail extends AppCompatActivity {
         }
         else
             startActivity(new Intent(ActivityDroneDetail.this, MainActivity.class));
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        playVideo();
     }
 }

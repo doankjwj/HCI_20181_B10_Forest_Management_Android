@@ -39,14 +39,16 @@
             android:value="@string/google_map_key" />
 
         <activity
-            android:name=".ActivitySelectDrone"
+            android:name=".ActivityAreaInfo"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity
             android:name=".ActivityConfigDrone"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity android:name=".activities.VideoDetail" />
         <activity android:name=".activities.NewUserActivity" />
-        <activity android:name=".ActivityControlDrone"></activity>
+        <activity android:name=".ActivityControlDrone" />
+        <activity android:name=".ActivitySelectDrone"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
     </application>
 
 </manifest>

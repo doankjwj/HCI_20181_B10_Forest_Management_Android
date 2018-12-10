@@ -38,7 +38,7 @@ public class BaseActivity extends AppCompatActivity{
                 startActivity(intent);
                 return true;
             case R.id.bnb_resetDataBase:
-                DroneUltis.initDataBase(getApplicationContext(), 30);
+                DroneUltis.initDataBase(getApplicationContext(), 120);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
