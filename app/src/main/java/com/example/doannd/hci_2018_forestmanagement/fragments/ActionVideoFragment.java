@@ -1,6 +1,7 @@
 package com.example.doannd.hci_2018_forestmanagement.fragments;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -76,13 +77,16 @@ public class ActionVideoFragment extends Fragment {
         btnTheoKhuVuc=(Button) view.findViewById(R.id.btnTheoKhuVuc);
         btnTheoNgay=(Button) view.findViewById(R.id.btnTheoNgay);
 
+        btnTheoNgay.setBackgroundColor(Color.BLUE);
+
         final GridView gridView = (GridView) view.findViewById(R.id.grvVideo);
 
         //final MyDatabaseHelper db = new MyDatabaseHelper(getContext());
         final MyDatabaseHelper db = MyDatabaseHelper.getInstance(getContext());
         //db.createDefaultNotesIfNeed();
 
-        List<Video> list=  db.getAllVideos("Video_Drone_Id");
+        List<Video> list=  db.getAllVideos("Video_Date");
+        this.noteList.clear();
         this.noteList.addAll(list);
 
 //        this.listViewAdapter = new ArrayAdapter<Video>(getContext(),
@@ -141,7 +145,9 @@ public class ActionVideoFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
-                //MyDatabaseHelper db = new MyDatabaseHelper(getContext());
+                btnTheoDrone.setBackgroundColor(Color.BLUE);
+                btnTheoKhuVuc.setBackgroundResource(android.R.drawable.btn_default);
+                btnTheoNgay.setBackgroundResource(android.R.drawable.btn_default);
                 List<Video> list=  db.getAllVideos("Video_Drone_Id");
                 noteList.clear();
                 noteList.addAll(list);
@@ -154,6 +160,9 @@ public class ActionVideoFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
+                btnTheoKhuVuc.setBackgroundColor(Color.BLUE);
+                btnTheoDrone.setBackgroundResource(android.R.drawable.btn_default);
+                btnTheoNgay.setBackgroundResource(android.R.drawable.btn_default);
                 List<Video> list=  db.getAllVideos("Video_KhuVuc_Id");
                 noteList.clear();
                 noteList.addAll(list);
@@ -166,6 +175,9 @@ public class ActionVideoFragment extends Fragment {
 
             @Override
             public void onClick(View arg0) {
+                btnTheoNgay.setBackgroundColor(Color.BLUE);
+                btnTheoKhuVuc.setBackgroundResource(android.R.drawable.btn_default);
+                btnTheoDrone.setBackgroundResource(android.R.drawable.btn_default);
                 List<Video> list=  db.getAllVideos("Video_Date");
                 noteList.clear();
                 noteList.addAll(list);

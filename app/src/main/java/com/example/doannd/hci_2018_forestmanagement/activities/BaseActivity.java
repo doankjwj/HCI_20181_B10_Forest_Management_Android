@@ -12,7 +12,6 @@ import android.view.Menu;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.doannd.hci_2018_forestmanagement.Function.DroneUltis;
-import com.example.doannd.hci_2018_forestmanagement.activities.LoginActivity;
 import com.example.doannd.hci_2018_forestmanagement.R;
 
 public class BaseActivity extends AppCompatActivity{
@@ -29,8 +28,10 @@ public class BaseActivity extends AppCompatActivity{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-//            case R.id.bnb_setting:
-//                return true;
+            case R.id.bnb_qa:
+                Intent intent1=new Intent(BaseActivity.this, QAActivity.class);
+                startActivity(intent1);
+                return true;
             case R.id.bnb_logout:
                 SharedPreferences sharedPref = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
                 sharedPref.edit().clear().commit();

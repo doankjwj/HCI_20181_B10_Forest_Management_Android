@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.doannd.hci_2018_forestmanagement.activities.MainActivity">
 
-    <!--<item-->
-        <!--android:id="@+id/bnb_setting"-->
-        <!--android:orderInCategory="100"-->
-        <!--android:title="@string/bnb_setting"-->
-        <!--app:showAsAction="never" />-->
+    <item
+        android:id="@+id/bnb_resetDataBase"
+        android:orderInCategory="100"
+        android:title="@string/bnb_reset_database"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/bnb_qa"
+        android:orderInCategory="100"
+        android:title="@string/bnb_qa"
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/bnb_logout"
         android:orderInCategory="100"
         android:title="@string/bnb_logout"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/bnb_resetDataBase"
-        android:orderInCategory="100"
-        android:title="@string/bnb_reset_database"
         app:showAsAction="never" />
 </menu>

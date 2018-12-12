@@ -73,7 +73,10 @@ public class UserDetailActivity extends BaseActivity {
                     tvNotify.setText("Họ tên không được để trống!");
                 } else {
                     db.updateUser(new User(username, password, getUserType(spUserType.getSelectedItemPosition()), hoTen, birthDay));
-                    tvNotify.setText("Cập nhật thành công!");
+                    //tvNotify.setText("Cập nhật thành công!");
+                    Intent intent = new Intent(UserDetailActivity.this, UsersActivity.class);
+                    intent.putExtra("notify", "Cập nhật user thành công!");
+                    startActivity(intent);
                 }
             }
         });

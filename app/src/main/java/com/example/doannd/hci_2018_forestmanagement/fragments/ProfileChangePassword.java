@@ -2,7 +2,9 @@ package com.example.doannd.hci_2018_forestmanagement.fragments;
 
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,6 +18,7 @@ import android.support.v4.app.FragmentManager;
 
 import com.example.doannd.hci_2018_forestmanagement.MyDatabaseHelper;
 import com.example.doannd.hci_2018_forestmanagement.R;
+import com.example.doannd.hci_2018_forestmanagement.activities.ProfileActivity;
 import com.example.doannd.hci_2018_forestmanagement.model.User;
 
 import static java.security.AccessController.getContext;
@@ -70,10 +73,14 @@ public class ProfileChangePassword extends Fragment {
                     SharedPreferences.Editor editor=sharedPref.edit();
                     editor.putString("password",newPass);
                     editor.apply();
+                    password=newPass;
 //                    android.support.v4.app.Fragment frg = null;
 //                    frg = getFragmentManager().findFragmentByTag("ProfileChangePassword");
 //                    android.support.v4.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
 //                    ft.detach(frg).attach(frg).commit();
+                    edtOldPass.setText("");
+                    edtNewPass.setText("");
+                    edtRePass.setText("");
                     Toast.makeText(getContext(),"Đổi mật khẩu thành công!",Toast.LENGTH_LONG).show();
                 }
             }

@@ -6,13 +6,15 @@ public class Video {
     private String DroneID;
     private String KhuVucID;
     private String Date;
+    private int IsAnalyze;
 
-    public Video(String videoID, String droneID, String khuVucID, String date) {
+    public Video(String videoID, String droneID, String khuVucID, String date, int isAnalyze) {
 
         VideoID = videoID;
         DroneID = droneID;
         KhuVucID = khuVucID;
         Date = date;
+        IsAnalyze=isAnalyze;
     }
 
     public String getVideoID() {
@@ -45,5 +47,13 @@ public class Video {
 
     public void setDate(String date) {
         Date = date;
+    }
+
+    public int getIsAnalyze() {
+        return IsAnalyze;
+    }
+
+    public void setIsAnalyze(int isAnalyze) {
+        IsAnalyze = isAnalyze;
     }
 }

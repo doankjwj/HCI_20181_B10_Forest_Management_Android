@@ -114,6 +114,7 @@
         android:layout_marginStart="84dp"
         android:layout_marginLeft="84dp"
         android:layout_marginTop="64dp"
+        android:background="@color/colorPrimary"
         android:gravity="center"
         android:text="Cập nhật"
         app:layout_constraintLeft_toLeftOf="parent"

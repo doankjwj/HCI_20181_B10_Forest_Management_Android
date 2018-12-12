@@ -60,21 +60,21 @@ public class ActionReportFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_action_report, container, false);
 
-        Spinner spKhuVuc = (Spinner) view.findViewById(R.id.spKhuVuc);
-
-        String arr[] = {
-                "KHUVUC1",
-                "KHUVUC2",
-                "KHUVUC3",
-                "KHUVUC4",
-                "KHUVUC5"
-        };
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, arr);
-        adapter.setDropDownViewResource
-                (android.R.layout.simple_list_item_single_choice);
-
-        spKhuVuc.setAdapter(adapter);
+//        Spinner spKhuVuc = (Spinner) view.findViewById(R.id.spKhuVuc);
+//
+//        String arr[] = {
+//                "KHUVUC1",
+//                "KHUVUC2",
+//                "KHUVUC3",
+//                "KHUVUC4",
+//                "KHUVUC5"
+//        };
+//
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, arr);
+//        adapter.setDropDownViewResource
+//                (android.R.layout.simple_list_item_single_choice);
+//
+//        spKhuVuc.setAdapter(adapter);
         //spKhuVuc.setSelection(setPositonSpinner(usertype));
         return view;
     }

@@ -10,10 +10,10 @@
 
     <Button
         android:id="@+id/btnTheoNgay"
-        android:layout_width="wrap_content"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginTop="8dp"
         android:text="Theo ngày"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,10 +21,8 @@
 
     <Button
         android:id="@+id/btnTheoKhuVuc"
-        android:layout_width="wrap_content"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="8dp"
         android:text="Theo khu vực"
         app:layout_constraintStart_toEndOf="@+id/btnTheoNgay"
@@ -32,13 +30,11 @@
 
     <Button
         android:id="@+id/btnTheoDrone"
-        android:layout_width="wrap_content"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         android:text="Theo drone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnTheoKhuVuc"

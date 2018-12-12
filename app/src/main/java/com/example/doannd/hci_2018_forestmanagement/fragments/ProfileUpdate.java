@@ -12,6 +12,7 @@ import android.content.Context;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.doannd.hci_2018_forestmanagement.Function.Ultis;
 import com.example.doannd.hci_2018_forestmanagement.MyDatabaseHelper;
 import com.example.doannd.hci_2018_forestmanagement.R;
 import com.example.doannd.hci_2018_forestmanagement.model.User;
@@ -46,7 +47,7 @@ public class ProfileUpdate extends Fragment {
         birthday=sharedPref.getString("birthday", "");
 
         edtUsername.setText(username);
-        edtUserType.setText(usertype);
+        edtUserType.setText(Ultis.ChucVu(usertype));
         edtHoTen.setText(hoten);
         edtBirthDay.setText(birthday);
 
@@ -62,10 +63,11 @@ public class ProfileUpdate extends Fragment {
                     hoten=edtHoTen.getText().toString().trim();
                     birthday=edtBirthDay.getText().toString().trim();
                     db.updateUser(new User(username,password,usertype,hoten,birthday));
-//                    SharedPreferences sharedPref = getContext().getSharedPreferences("userInfo", Context.MODE_PRIVATE);
-//                    SharedPreferences.Editor editor=sharedPref.edit();
-//                    editor.putString("password",newPass);
-//                    editor.apply();
+                    SharedPreferences sharedPref = getContext().getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor=sharedPref.edit();
+                    editor.putString("hoten",hoten);
+                    editor.putString("birthday",birthday);
+                    editor.apply();
                     Toast.makeText(getContext(), "Cập nhật thành công!", Toast.LENGTH_LONG).show();
                 }
             }

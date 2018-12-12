@@ -9,6 +9,7 @@ public class Data {
     private String DroneID;
     private String Date;
     private List<Warning> ListWarning;
+    private String NhietDo;
 
     public Data(int dataID, String khuVucID, String videoID, String droneID, String date, List<Warning> listWarning) {
         DataID = dataID;

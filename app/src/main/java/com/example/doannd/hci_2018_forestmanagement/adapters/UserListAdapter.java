@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.doannd.hci_2018_forestmanagement.Function.Ultis;
 import com.example.doannd.hci_2018_forestmanagement.R;
 import com.example.doannd.hci_2018_forestmanagement.model.User;
 
@@ -54,7 +55,7 @@ public class UserListAdapter extends BaseAdapter{
 
         User user = this.listData.get(position);
         holder.hoTenView.setText(user.getHoTen());
-        holder.chucVuView.setText(user.getUserName() + ", Chức vụ: " + user.getUserType());
+        holder.chucVuView.setText(user.getUserName() + ", Chức vụ: " + Ultis.ChucVu(user.getUserType()));
 
         //int imageId = this.getMipmapResIdByName(user.getFlagName());
 

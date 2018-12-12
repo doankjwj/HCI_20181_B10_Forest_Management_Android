@@ -2,6 +2,7 @@
     <string name="bnb_logout">Đăng xuất</string>
     <string name="bnb_setting">Cài đặt</string>
     <string name="bnb_reset_database">Khởi tạo lại dữ liệu Drone</string>
+    <string name="bnb_qa">QnA</string>
 
     <string name="data_base_name">drone_list.sqlite</string>
     <!--Map-->
