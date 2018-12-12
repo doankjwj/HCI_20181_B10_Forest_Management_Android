@@ -2,7 +2,6 @@ package com.example.doannd.hci_2018_forestmanagement;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,7 +14,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.doannd.hci_2018_forestmanagement.Data.Area;
 import com.example.doannd.hci_2018_forestmanagement.Data.Drone;
@@ -23,14 +21,12 @@ import com.example.doannd.hci_2018_forestmanagement.Data.DroneConfig;
 import com.example.doannd.hci_2018_forestmanagement.Function.DroneUltis;
 import com.example.doannd.hci_2018_forestmanagement.Function.StringUtls;
 
-import java.util.Random;
-
 public class ActivityConfigDrone extends AppCompatActivity {
 
     Area area;
     Drone drone;
 
-    TextView txtStatus, txtEnergy, txtIdDrone, txtHeight;
+    TextView txtStatus, txtEnergy, txtIdDrone, txtHeight, txtTime;
     ImageView imgDrone;
     Button btnOk;
     Spinner spinnerHeight, spinnerTime;
@@ -55,6 +51,7 @@ public class ActivityConfigDrone extends AppCompatActivity {
         txtEnergy.setText("Năng Lượng: " + drone.getEnergy() + "%");
         txtIdDrone.setText("Id: " + StringUtls.longString(String.valueOf(drone.getId()), 5, '0', true) );
         txtHeight.setText("Chọn độ cao bay");
+        txtTime.setText("Chọn thời gian bay");
         imgDrone.setImageResource(R.drawable.drone_free);
 
         btnOk = (Button)findViewById(R.id.btnDrone);
@@ -84,6 +81,8 @@ public class ActivityConfigDrone extends AppCompatActivity {
         txtEnergy = (TextView)findViewById(R.id.txtEnergy);
         txtIdDrone = (TextView)findViewById(R.id.txtIdDrone);
         txtHeight = (TextView)findViewById(R.id.txtHeight);
+        txtTime = (TextView)findViewById(R.id.txtTime);
+
         spinnerHeight = (Spinner)findViewById(R.id.droneHeightSpinner);
         spinnerTime = (Spinner)findViewById(R.id.droneTimeSpinner);
         imgDrone = (ImageView)findViewById(R.id.imgIdDrone);

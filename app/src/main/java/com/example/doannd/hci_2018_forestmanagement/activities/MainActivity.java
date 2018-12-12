@@ -1,17 +1,14 @@
 package com.example.doannd.hci_2018_forestmanagement.activities;
 
 import android.Manifest;
-import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.ActivityCompat;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -19,11 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.doannd.hci_2018_forestmanagement.ActivitySelectDrone;
+import com.example.doannd.hci_2018_forestmanagement.ActivityAreaInfo;
 import com.example.doannd.hci_2018_forestmanagement.Data.Area;
-import com.example.doannd.hci_2018_forestmanagement.Data.Drone;
 import com.example.doannd.hci_2018_forestmanagement.DataBase.AppDataBase;
-import com.example.doannd.hci_2018_forestmanagement.Function.DroneUltis;
 import com.example.doannd.hci_2018_forestmanagement.Function.StringUtls;
 import com.example.doannd.hci_2018_forestmanagement.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -32,12 +27,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.Random;
-
-import javax.xml.transform.OutputKeys;
-
 
 
 public class MainActivity extends BaseActivity implements
@@ -165,7 +156,7 @@ public class MainActivity extends BaseActivity implements
 
     }
     private void onOk() {
-        Intent intent = new Intent(MainActivity.this, ActivitySelectDrone.class);
+        Intent intent = new Intent(MainActivity.this, ActivityAreaInfo.class);
         Area area = getAreaInfo();
         intent.putExtra(String.valueOf(getResources().getString(R.string.intentKey)), area);
         startActivity(intent);

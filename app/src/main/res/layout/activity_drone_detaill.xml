@@ -141,11 +141,11 @@
             android:gravity="left"
             android:text="Speed"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/txtHeight"
+            app:layout_constraintStart_toEndOf="@+id/txtTime"
             app:layout_constraintTop_toBottomOf="@+id/txtPosition" />
 
         <TextView
-            android:id="@+id/txtHeight"
+            android:id="@+id/txtTime"
             android:layout_width="180dp"
             android:layout_height="40dp"
             android:layout_marginStart="2dp"
@@ -186,9 +186,20 @@
             android:scaleType="centerCrop"
             android:src="@drawable/forest"
             app:layout_constraintBottom_toTopOf="@+id/btnView"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="152dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/btnView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
         <Button
             android:id="@+id/btnHistory"
             android:layout_width="match_parent"

@@ -6,8 +6,6 @@ import android.hardware.Camera;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -15,10 +13,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.doannd.hci_2018_forestmanagement.Data.Drone;
-import com.example.doannd.hci_2018_forestmanagement.Function.Const;
 import com.example.doannd.hci_2018_forestmanagement.Function.Ultis;
 
 import java.io.IOException;
@@ -87,7 +83,7 @@ public class ActivityControlDrone extends AppCompatActivity {
         txtLatitude = (TextView) findViewById(R.id.txtLatitude);
         txtLongitude = (TextView) findViewById(R.id.txtLongitude);
         txtForward = (TextView) findViewById(R.id.txtForward);
-        txtHeight = (TextView) findViewById(R.id.txtHeight);
+        txtHeight = (TextView) findViewById(R.id.txtTime);
         txtSpeed = (TextView) findViewById(R.id.txtSpeed);
         txtLimited = (TextView) findViewById(R.id.txtLimitted);
 
