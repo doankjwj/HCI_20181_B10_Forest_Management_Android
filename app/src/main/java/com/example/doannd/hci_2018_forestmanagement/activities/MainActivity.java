@@ -3,12 +3,14 @@ package com.example.doannd.hci_2018_forestmanagement.activities;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -59,6 +61,7 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.e("E", "ON CREATE");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -226,6 +229,20 @@ public class MainActivity extends BaseActivity implements
         mMap.setOnMyLocationButtonClickListener(this);
 //
         initThreadControlZoom();
+        moveMapToLast();
+    }
+
+    private void moveMapToLast() {
+        SharedPreferences sharedPref = getSharedPreferences("mapInfo", Context.MODE_PRIVATE);
+
+        float latitude = sharedPref.getFloat("latitude", (float) -1.111111111);
+        float longitude = sharedPref.getFloat("longitude", (float) -1.111111111);
+        float zoom = sharedPref.getFloat("zoom", (float) 0);
+
+        if (zoom != 0)
+        {
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), zoom));
+        }
     }
 
     private void initThreadControlZoom() {
@@ -318,5 +335,29 @@ public class MainActivity extends BaseActivity implements
     private void dropDatabase(String table)
     {
         mAppDataBase.queryData("DROP TABLE " + table);
+    }
+
+    @Override
+    protected void onStop() {
+        Log.e("E", "ON STOPPPPPPPPP");
+        SharedPreferences sharedPref = getSharedPreferences("mapInfo", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putFloat("latitude", (float) mMap.getCameraPosition().target.latitude);
+        editor.putFloat("longitude", (float) mMap.getCameraPosition().target.longitude);
+        editor.putFloat("zoom", mMap.getCameraPosition().zoom);
+        editor.apply();
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.e("E", "ON DESTROY");
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.e("E", "ON RESUME");
+        super.onResume();
     }
 }
