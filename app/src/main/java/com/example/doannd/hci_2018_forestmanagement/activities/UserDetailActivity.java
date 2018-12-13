@@ -21,7 +21,7 @@ public class UserDetailActivity extends BaseActivity {
     private EditText edtUsername, edtHoTen, edtBirthDay;
     private Spinner spUserType;
     private String username, usertype, hoten, birthday, password;
-    private Button btnUpdate, btnDelete;
+    private Button btnUpdate, btnDelete,btnPass;
     private TextView tvNotify;
 
     @Override
@@ -61,6 +61,7 @@ public class UserDetailActivity extends BaseActivity {
 
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
         btnDelete = (Button) findViewById(R.id.btnDelete);
+        btnPass = (Button) findViewById(R.id.btnPass);
 
         final MyDatabaseHelper db = MyDatabaseHelper.getInstance(this);
 
@@ -78,6 +79,16 @@ public class UserDetailActivity extends BaseActivity {
                     intent.putExtra("notify", "Cập nhật user thành công!");
                     startActivity(intent);
                 }
+            }
+        });
+
+        btnPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                User user=db.getUser(username);
+                user.setPassWord("1");
+                db.updateUser(user);
+                tvNotify.setText("Mật khẩu đã được đặt lại là \"1\"");
             }
         });
 

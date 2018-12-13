@@ -44,8 +44,8 @@ public class VideoDetail extends AppCompatActivity {
         tvDroneID=(TextView) findViewById(R.id.tvDroneID);
         tvKhuVucID=(TextView) findViewById(R.id.tvKhuVucID);
         tvNgay=(TextView) findViewById(R.id.tvNgay);
-        tvTime=(TextView) findViewById(R.id.tvTime);
-        tvHeight=(TextView) findViewById(R.id.tvHeight);
+        //tvTime=(TextView) findViewById(R.id.tvTime);
+        //tvHeight=(TextView) findViewById(R.id.tvHeight);
         tvNumWarning=(TextView) findViewById(R.id.tvNumWarning);
         String videoId=data.getStringExtra("videoid");
         tvVideoID.setText(data.getStringExtra("videoid"));

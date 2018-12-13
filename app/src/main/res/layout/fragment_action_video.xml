@@ -10,7 +10,7 @@
 
     <Button
         android:id="@+id/btnTheoNgay"
-        android:layout_width="125dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
@@ -21,7 +21,7 @@
 
     <Button
         android:id="@+id/btnTheoKhuVuc"
-        android:layout_width="125dp"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Theo khu vực"
@@ -30,7 +30,7 @@
 
     <Button
         android:id="@+id/btnTheoDrone"
-        android:layout_width="125dp"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"

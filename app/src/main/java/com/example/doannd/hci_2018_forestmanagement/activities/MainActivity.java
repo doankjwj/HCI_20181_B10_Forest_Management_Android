@@ -337,17 +337,17 @@ public class MainActivity extends BaseActivity implements
         mAppDataBase.queryData("DROP TABLE " + table);
     }
 
-    @Override
-    protected void onStop() {
-        Log.e("E", "ON STOPPPPPPPPP");
-        SharedPreferences sharedPref = getSharedPreferences("mapInfo", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putFloat("latitude", (float) mMap.getCameraPosition().target.latitude);
-        editor.putFloat("longitude", (float) mMap.getCameraPosition().target.longitude);
-        editor.putFloat("zoom", mMap.getCameraPosition().zoom);
-        editor.apply();
-        super.onStop();
-    }
+//    @Override
+//    protected void onStop() {
+//        Log.e("E", "ON STOPPPPPPPPP");
+//        SharedPreferences sharedPref = getSharedPreferences("mapInfo", Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPref.edit();
+//        editor.putFloat("latitude", (float) mMap.getCameraPosition().target.latitude);
+//        editor.putFloat("longitude", (float) mMap.getCameraPosition().target.longitude);
+//        editor.putFloat("zoom", mMap.getCameraPosition().zoom);
+//        editor.apply();
+//        super.onStop();
+//    }
 
     @Override
     protected void onDestroy() {
