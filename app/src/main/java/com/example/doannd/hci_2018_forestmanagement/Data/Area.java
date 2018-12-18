@@ -3,18 +3,19 @@ package com.example.doannd.hci_2018_forestmanagement.Data;
 import java.io.Serializable;
 
 public class Area implements Serializable {
-    float latitude, longitude, width, height, area;
+    float latitude, longitude, width, height, area, zoom;
 
     public Area()
     {
 
     };
-    public Area(float latitude, float longitude, float width, float height, float area) {
+    public Area(float latitude, float longitude, float width, float height, float area, float zoom) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.width = width;
         this.height = height;
         this.area = area;
+        this.zoom = zoom;
     }
 
     public float getLatitude() {
@@ -56,5 +57,13 @@ public class Area implements Serializable {
 
     public void setArea(float area) {
         this.area = area;
+    }
+
+    public float getZoom() {
+        return zoom;
+    }
+
+    public void setZoom(float zoom) {
+        this.zoom = zoom;
     }
 }

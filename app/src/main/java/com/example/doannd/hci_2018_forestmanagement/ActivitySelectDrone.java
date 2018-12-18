@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.doannd.hci_2018_forestmanagement.Data.Area;
 import com.example.doannd.hci_2018_forestmanagement.Data.Drone;
+import com.example.doannd.hci_2018_forestmanagement.Data.Location;
 import com.example.doannd.hci_2018_forestmanagement.DataBase.AppDataBase;
 import com.example.doannd.hci_2018_forestmanagement.Function.Const;
 import com.example.doannd.hci_2018_forestmanagement.Function.DroneUltis;
@@ -33,6 +34,7 @@ public class ActivitySelectDrone extends AppCompatActivity {
 
     Drone drone;
     Area area;
+    ArrayList<Location> listLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class ActivitySelectDrone extends AppCompatActivity {
         setContentView(R.layout.activity_select_drone);
 
         area = (Area) getIntent().getSerializableExtra("areaConfig");
+        listLocation = (ArrayList<Location>) getIntent().getBundleExtra("route").getSerializable("listLocation");
         resetDroneInfo();
         reference();
         addDrone();
@@ -60,6 +63,7 @@ public class ActivitySelectDrone extends AppCompatActivity {
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle bundle = new Bundle();
                 int droneId = sharedPreferences.getInt("droneSelected", -1);
                 if (droneId == -1)
                     Toast.makeText(getApplicationContext(), "Chưa chọn Drone", Toast.LENGTH_SHORT).show();
@@ -69,6 +73,8 @@ public class ActivitySelectDrone extends AppCompatActivity {
                     Intent intent = new Intent(ActivitySelectDrone.this, ActivityConfigDrone.class);
                     intent.putExtra("areaConfig", area);
                     intent.putExtra("droneInfo", drone);
+                    bundle.putSerializable("listLocation", listLocation);
+                    intent.putExtra("route", bundle);
                     startActivity(intent);
                 }
             }

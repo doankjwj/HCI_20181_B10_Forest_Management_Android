@@ -24,4 +24,5 @@
     <color name="droneMonitor">#23b9ff</color>
     <color name="droneFree">#1BB600</color>
     <color name="droneMaintance">#515151</color>
+    <color name="blueLight">#15BCFD</color>
 </resources>

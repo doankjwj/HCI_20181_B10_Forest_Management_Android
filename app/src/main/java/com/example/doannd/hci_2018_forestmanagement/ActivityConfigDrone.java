@@ -18,8 +18,11 @@ import android.widget.TextView;
 import com.example.doannd.hci_2018_forestmanagement.Data.Area;
 import com.example.doannd.hci_2018_forestmanagement.Data.Drone;
 import com.example.doannd.hci_2018_forestmanagement.Data.DroneConfig;
+import com.example.doannd.hci_2018_forestmanagement.Data.Location;
 import com.example.doannd.hci_2018_forestmanagement.Function.DroneUltis;
 import com.example.doannd.hci_2018_forestmanagement.Function.StringUtls;
+
+import java.util.ArrayList;
 
 public class ActivityConfigDrone extends AppCompatActivity {
 
@@ -33,6 +36,8 @@ public class ActivityConfigDrone extends AppCompatActivity {
     int currentHeight;
     int currentTime;
 
+    ArrayList<Location> listLocation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +46,8 @@ public class ActivityConfigDrone extends AppCompatActivity {
 
         area = (Area) getIntent().getSerializableExtra("areaConfig");
         drone = (Drone) getIntent().getSerializableExtra("droneInfo");
-
+        listLocation = (ArrayList<Location>) getIntent().getBundleExtra("route").getSerializable("listLocation");
+        Log.e("NUM ROUTE", listLocation.size() + "");
         reference();
         matchData();
     }

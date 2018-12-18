@@ -25,6 +25,10 @@
         <item>Hệ thống - Gần nhất</item>
         <item>Thủ công</item>
     </string-array>
+    <string-array name="spinnerRoute">
+        <item>LT 1: ngẫu nhiên</item>
+        <item>LT 2: liên tiếp</item>
+    </string-array>
     <string-array name="spinnerDroneHeight">
         <item>10m</item>
         <item>15m</item>

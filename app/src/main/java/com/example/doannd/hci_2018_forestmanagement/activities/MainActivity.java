@@ -174,7 +174,7 @@ public class MainActivity extends BaseActivity implements
         float width = MAP_DEFAULT_ZOOM/zoom * MAP_SCALE;
         float height = MAP_DEFAULT_ZOOM/zoom * MAP_SCALE;
         float size = width * height;
-        Area area = new Area(latitude, longitude, width, height, size);
+        Area area = new Area(latitude, longitude, width, height, size, zoom);
         return area;
     };
     private void onCrop()
@@ -337,17 +337,17 @@ public class MainActivity extends BaseActivity implements
         mAppDataBase.queryData("DROP TABLE " + table);
     }
 
-//    @Override
-//    protected void onStop() {
-//        Log.e("E", "ON STOPPPPPPPPP");
-//        SharedPreferences sharedPref = getSharedPreferences("mapInfo", Context.MODE_PRIVATE);
-//        SharedPreferences.Editor editor = sharedPref.edit();
-//        editor.putFloat("latitude", (float) mMap.getCameraPosition().target.latitude);
-//        editor.putFloat("longitude", (float) mMap.getCameraPosition().target.longitude);
-//        editor.putFloat("zoom", mMap.getCameraPosition().zoom);
-//        editor.apply();
-//        super.onStop();
-//    }
+    @Override
+    protected void onStop() {
+        Log.e("E", "ON STOPPPPPPPPP");
+        SharedPreferences sharedPref = getSharedPreferences("mapInfo", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putFloat("latitude", (float) mMap.getCameraPosition().target.latitude);
+        editor.putFloat("longitude", (float) mMap.getCameraPosition().target.longitude);
+        editor.putFloat("zoom", mMap.getCameraPosition().zoom);
+        editor.apply();
+        super.onStop();
+    }
 
     @Override
     protected void onDestroy() {
