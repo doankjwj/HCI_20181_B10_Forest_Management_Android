@@ -49,6 +49,7 @@
         <activity android:name=".ActivityControlDrone" />
         <activity android:name=".activities.QAActivity" />
         <activity android:name=".activities.QADetailActivity"></activity>
+        <activity android:name=".ActivityAreaInfo"></activity>
     </application>
 
 </manifest>
