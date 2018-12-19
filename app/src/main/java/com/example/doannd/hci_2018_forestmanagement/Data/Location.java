@@ -4,10 +4,12 @@ import java.io.Serializable;
 
 public class Location implements Serializable {
     float latitude, longitude;
+    int index;
 
-    public Location(float latitude, float longitude) {
+    public Location(float latitude, float longitude, int index) {
         this.latitude = latitude;
         this.longitude = longitude;
+        this.index = index;
     }
 
     public float getLatitude() {
@@ -24,5 +26,23 @@ public class Location implements Serializable {
 
     public void setLongitude(float longitude) {
         this.longitude = longitude;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    public void addLatitude(float lat)
+    {
+        setLatitude(getLatitude() + lat);
+    }
+
+    public void addLongitude(float lon)
+    {
+        setLongitude(getLongitude() + lon);
     }
 }

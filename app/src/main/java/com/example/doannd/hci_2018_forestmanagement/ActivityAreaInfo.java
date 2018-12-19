@@ -111,6 +111,7 @@ public class ActivityAreaInfo extends AppCompatActivity implements AdapterView.O
         ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(this, R.array.spinnerDroneSelector, android.R.layout.simple_spinner_item);
         adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerSelectDrone.setAdapter(adapterSpinner);
+        spinnerSelectDrone.setAdapter(adapterSpinner);
         spinnerSelectDrone.setOnItemSelectedListener(this);
 
         ArrayAdapter<CharSequence> adapterSpinnerRoute = ArrayAdapter.createFromResource(this, R.array.spinnerRoute, android.R.layout.simple_spinner_item);
@@ -197,7 +198,7 @@ public class ActivityAreaInfo extends AppCompatActivity implements AdapterView.O
         {
             Location location = listLocation.get(i);
             LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-            MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("" + i).icon(BitmapDescriptorFactory.fromResource(getBitmapRes(i+1)));
+            MarkerOptions markerOptions = new MarkerOptions().position(latLng).title(location.getLatitude() + ":" + location.getLongitude()).icon(BitmapDescriptorFactory.fromResource(getBitmapRes(i+1)));
             mMap.addMarker(markerOptions);
         };
     }
@@ -211,7 +212,7 @@ public class ActivityAreaInfo extends AppCompatActivity implements AdapterView.O
         ArrayList<Location> list = new ArrayList<>();
         for (int i=0; i<numRoute; i++)
         {
-            Location location = new Location((float)(latitude - dis/2 + Math.random() * dis), (float)(longitude -dis/2 + Math.random() * dis));
+            Location location = new Location((float)(latitude - dis/2 + Math.random() * dis), (float)(longitude -dis/2 + Math.random() * dis), i);
             list.add(location);
         }
         return list;
@@ -228,13 +229,13 @@ public class ActivityAreaInfo extends AppCompatActivity implements AdapterView.O
         {
             float x = (i+1)%4;
             float y = (i+1)/4;
-            Location location = new Location((float)(latitude - dis/2 + y * dis/3), (float)(longitude -dis/2 + x * dis/3));
+            Location location = new Location((float)(latitude - dis/2.6 + y * dis/3), (float)(longitude -dis/2 + x * dis/3), i);
             list.add(location);
         }
         return list;
     };
 
-    private int getBitmapRes(int i)
+    public static int getBitmapRes(int i)
     {
         int res = 0;
         switch (i)

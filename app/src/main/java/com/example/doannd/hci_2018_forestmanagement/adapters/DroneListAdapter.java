@@ -75,7 +75,8 @@ public class DroneListAdapter extends BaseAdapter {
                 idColor = context.getResources().getColor(R.color.droneFree);
                 break;
             case Const.DRONE_STATUS_BUSY:
-                imgResource = R.drawable.drone_monitor;
+//                imgResource = R.drawable.drone_monitor;
+                imgResource = R.drawable.forest_demo;
                 idColor = context.getResources().getColor(R.color.blue_light);
                 break;
             case Const.DRONE_STATUS_MAINTENANCE:

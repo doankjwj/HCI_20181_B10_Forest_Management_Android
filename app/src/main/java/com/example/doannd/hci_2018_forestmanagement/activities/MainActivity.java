@@ -61,7 +61,6 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.e("E", "ON CREATE");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -170,7 +169,7 @@ public class MainActivity extends BaseActivity implements
         float latitude = (float) latLng.latitude;
         float longitude = (float) latLng.longitude;
 
-        float zoom = mMap.getCameraPosition().zoom;
+        float zoom = (float) (mMap.getCameraPosition().zoom + 0.5);
         float width = MAP_DEFAULT_ZOOM/zoom * MAP_SCALE;
         float height = MAP_DEFAULT_ZOOM/zoom * MAP_SCALE;
         float size = width * height;
@@ -339,7 +338,6 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     protected void onStop() {
-        Log.e("E", "ON STOPPPPPPPPP");
         SharedPreferences sharedPref = getSharedPreferences("mapInfo", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putFloat("latitude", (float) mMap.getCameraPosition().target.latitude);
@@ -351,13 +349,11 @@ public class MainActivity extends BaseActivity implements
 
     @Override
     protected void onDestroy() {
-        Log.e("E", "ON DESTROY");
         super.onDestroy();
     }
 
     @Override
     protected void onResume() {
-        Log.e("E", "ON RESUME");
         super.onResume();
     }
 }

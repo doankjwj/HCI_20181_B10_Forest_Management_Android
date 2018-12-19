@@ -12,11 +12,12 @@ public class Drone implements Serializable {
     int UserControlling;
     float latitude;
     float longitude;
+    float zoom;
     int height;
     int speed;
     int time; // minutes
 
-    public Drone(int id, String model, String mfg, int status, int energy, int userControlling, float latitude, float longitude, int height, int speed, int time) {
+    public Drone(int id, String model, String mfg, int status, int energy, int userControlling, float latitude, float longitude, float zoom, int height, int speed, int time) {
         this.id = id;
         this.model = model;
         this.mfg = mfg;
@@ -25,6 +26,7 @@ public class Drone implements Serializable {
         UserControlling = userControlling;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.zoom = zoom;
         this.height = height;
         this.speed = speed;
         this.time = time;
@@ -96,6 +98,14 @@ public class Drone implements Serializable {
 
     public void setLongitude(float longitude) {
         this.longitude = longitude;
+    }
+
+    public float getZoom() {
+        return zoom;
+    }
+
+    public void setZoom(float zoom) {
+        this.zoom = zoom;
     }
 
     public int getHeight() {

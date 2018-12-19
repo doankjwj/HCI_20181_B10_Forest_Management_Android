@@ -133,7 +133,7 @@ public class ActivityConfigDrone extends AppCompatActivity {
         int droneId = drone.getId();
         String userId = getSharedPreferences("userInfo", Context.MODE_PRIVATE).getString("username", "none");
         Log.e("Drone Register", "" + droneId);
-        DroneConfig droneConfig = new DroneConfig(area.getLatitude(), area.getLongitude(), currentHeight, 0, currentTime);
-        DroneUltis.registerDrone(getApplicationContext(), droneId, droneConfig, userId);
+        DroneConfig droneConfig = new DroneConfig(area.getLatitude(), area.getLongitude(), area.getZoom(), currentHeight, 0, currentTime);
+        DroneUltis.registerDrone(getApplicationContext(), droneId, droneConfig, userId, listLocation);
     }
 }

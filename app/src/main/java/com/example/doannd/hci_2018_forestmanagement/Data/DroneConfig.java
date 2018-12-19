@@ -1,14 +1,15 @@
 package com.example.doannd.hci_2018_forestmanagement.Data;
 
 public class DroneConfig {
-    float latitude, longitude;
+    float latitude, longitude, zoom;
     int height;
     int speed;
     int time;
 
-    public DroneConfig(float latitude, float longitude, int height, int speed, int time) {
+    public DroneConfig(float latitude, float longitude, float zoom, int height, int speed, int time) {
         this.latitude = latitude;
         this.longitude = longitude;
+        this.zoom = zoom;
         this.height = height;
         this.speed = speed;
         this.time = time;
@@ -28,6 +29,14 @@ public class DroneConfig {
 
     public void setLongitude(float longitude) {
         this.longitude = longitude;
+    }
+
+    public float getZoom() {
+        return zoom;
+    }
+
+    public void setZoom(float zoom) {
+        this.zoom = zoom;
     }
 
     public int getHeight() {

@@ -56,12 +56,21 @@ public class LoginActivity extends AppCompatActivity {
 
         requestPermission();
 
+        autoFillForm();
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validate(edtUsername.getText().toString(),edtPassword.getText().toString());
             }
         });
+    }
+
+    private void autoFillForm() {
+        SharedPreferences sharedPref = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+        String userName = sharedPref.getString("username", "");
+        String password = sharedPref.getString("password", "");
+        edtUsername.setText(userName);
+        edtPassword.setText(password);
     }
 
     private void requestPermission() {

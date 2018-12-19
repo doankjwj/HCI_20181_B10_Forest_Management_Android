@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class AppDataBase extends SQLiteOpenHelper {
     public AppDataBase(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -22,12 +23,14 @@ public class AppDataBase extends SQLiteOpenHelper {
 
     public void queryData(String sql)
     {
+        Log.e("QUERY DATA", sql);
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         sqLiteDatabase.execSQL(sql);
     }
 
     public Cursor getData(String sql)
     {
+        Log.e("GET DATA", sql);
         Cursor cursor;
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         cursor = sqLiteDatabase.rawQuery(sql, null);

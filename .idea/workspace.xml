@@ -14,17 +14,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b9f2da5-18df-40a5-814b-937d31f886d5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/l_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/l_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/l_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/l_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/l_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/l_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/l_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/l_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/l_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/l_9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -36,12 +25,19 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityAreaInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityAreaInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityConfigDrone.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityConfigDrone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivitySelectDrone.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivitySelectDrone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Area.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityControlDrone.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityControlDrone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityDroneDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityDroneDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Drone.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Drone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/DroneConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/DroneConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/DataBase/AppDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/DataBase/AppDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Function/DroneUltis.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Function/DroneUltis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/LoginActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_area_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_area_info.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/adapters/DroneListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/adapters/DroneListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_back_64.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_back_64.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_front_64.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/arrow_front_64.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_control_drone.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_control_drone.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,125 +59,42 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="ActivityAreaInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityAreaInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="95" column="57" selection-start-line="93" selection-start-column="24" selection-end-line="95" selection-end-column="57" />
+            <state relative-caret-position="150">
+              <caret line="231" column="71" selection-start-line="231" selection-start-column="71" selection-end-line="231" selection-end-column="71" />
               <folding>
-                <element signature="e#2195#2239#0" expanded="true" />
-                <element signature="e#2571#2619#0" expanded="true" />
-                <element signature="e#2678#2727#0" expanded="true" />
-                <element signature="e#2783#2828#0" expanded="true" />
-                <element signature="e#2890#2936#0" expanded="true" />
-                <element signature="e#2997#3041#0" expanded="true" />
-                <element signature="e#3652#4476#0" expanded="true" />
-                <element signature="e#4475#4476#0" expanded="true" />
-                <element signature="e#6236#6285#0" expanded="true" />
                 <element signature="method#getBitmapRes#0;class#ActivityAreaInfo#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivitySelectDrone.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivitySelectDrone.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
-              <folding>
-                <element signature="e#2292#3206#0" expanded="true" />
-                <element signature="e#3205#3206#0" expanded="true" />
-                <element signature="e#3325#3374#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityConfigDrone.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ActivityConfigDrone.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityConfigDrone.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+            <state relative-caret-position="424">
+              <caret line="136" column="25" selection-start-line="136" selection-start-column="25" selection-end-line="136" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <file leaf-file-name="DroneUltis.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Function/DroneUltis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Location.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Location.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+            <state relative-caret-position="85">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
               <folding>
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#310#311#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#432#433#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#555#556#0" expanded="true" />
+                <element signature="e#808#865#0" expanded="true" />
+                <element signature="e#1967#2024#0" expanded="true" />
+                <element signature="e#3055#3112#0" expanded="true" />
+                <element signature="e#5060#5117#0" expanded="true" />
+                <element signature="e#6047#6104#0" expanded="true" />
+                <element signature="e#7235#7292#0" expanded="true" />
+                <element signature="e#7488#7545#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Area.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Area.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-              <folding>
-                <element signature="e#1281#1282#0" expanded="true" />
-                <element signature="e#1320#1321#0" expanded="true" />
-                <element signature="e#1352#1353#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_area_info.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_area_info.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
-              <folding>
-                <element signature="e#1142#2076#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="51" selection-start-line="15" selection-start-column="8" selection-end-line="19" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -189,8 +102,129 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="350" selection-start-line="350" selection-end-line="350" />
+            <state relative-caret-position="160">
+              <caret line="204" column="25" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="25" />
+              <folding>
+                <element signature="e#3300#3468#0" expanded="true" />
+                <element signature="e#3467#3468#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/BaseActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="28" column="57" selection-start-line="27" selection-start-column="4" selection-end-line="28" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivityControlDrone.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityControlDrone.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="291" column="9" selection-start-line="291" selection-start-column="9" selection-end-line="291" selection-end-column="9" />
+              <folding>
+                <element signature="e#2686#2736#0" expanded="true" />
+                <element signature="e#3825#4199#0" expanded="true" />
+                <element signature="e#4198#4199#0" expanded="true" />
+                <element signature="e#4297#4674#0" expanded="true" />
+                <element signature="e#4673#4674#0" expanded="true" />
+                <element signature="e#5308#5711#0" expanded="true" />
+                <element signature="e#5710#5711#0" expanded="true" />
+                <element signature="e#5809#6214#0" expanded="true" />
+                <element signature="e#6213#6214#0" expanded="true" />
+                <element signature="e#6312#6581#0" expanded="true" />
+                <element signature="e#6580#6581#0" expanded="true" />
+                <element signature="e#6682#6951#0" expanded="true" />
+                <element signature="e#6950#6951#0" expanded="true" />
+                <element signature="e#7043#7570#0" expanded="true" />
+                <element signature="e#7569#7570#0" expanded="true" />
+                <element signature="e#7668#8214#0" expanded="true" />
+                <element signature="e#8213#8214#0" expanded="true" />
+                <element signature="e#8274#8275#0" expanded="true" />
+                <element signature="e#8313#8314#0" expanded="true" />
+                <element signature="e#8424#8425#0" expanded="true" />
+                <element signature="e#8463#8464#0" expanded="true" />
+                <element signature="e#8514#8515#0" expanded="true" />
+                <element signature="e#8562#8563#0" expanded="true" />
+                <element signature="e#8601#8602#0" expanded="true" />
+                <element signature="e#8641#8642#0" expanded="true" />
+                <element signature="e#8694#8695#0" expanded="true" />
+                <element signature="e#8744#8745#0" expanded="true" />
+                <element signature="e#8785#8786#0" expanded="true" />
+                <element signature="e#8827#8828#0" expanded="true" />
+                <element signature="e#8884#8885#0" expanded="true" />
+                <element signature="e#8938#8939#0" expanded="true" />
+                <element signature="method#onVisibleHand#0;class#ActivityControlDrone#0" />
+                <element signature="e#12081#12429#0" expanded="true" />
+                <element signature="e#12428#12429#0" expanded="true" />
+                <element signature="e#12507#12678#0" expanded="true" />
+                <element signature="e#12677#12678#0" expanded="true" />
+                <element signature="e#15458#15507#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DroneListAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/adapters/DroneListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bottom_navigation_bar.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation_bar.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu_control_drone.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_control_drone.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivityDroneDetail.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityDroneDetail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="166" column="48" selection-start-line="166" selection-start-column="48" selection-end-line="166" selection-end-column="48" />
+              <folding>
+                <element signature="e#1342#1416#0" expanded="true" />
+                <element signature="e#2313#2657#0" expanded="true" />
+                <element signature="e#2535#2585#0" expanded="true" />
+                <element signature="e#2656#2657#0" expanded="true" />
+                <element signature="e#2846#2889#0" expanded="true" />
+                <element signature="e#2976#3022#0" expanded="true" />
+                <element signature="e#3073#3117#0" expanded="true" />
+                <element signature="e#3501#3553#0" expanded="true" />
+                <element signature="e#3899#3948#0" expanded="true" />
+                <element signature="e#4121#4177#0" expanded="true" />
+                <element signature="e#4318#4365#0" expanded="true" />
+                <element signature="e#4455#4502#0" expanded="true" />
+                <element signature="e#4572#4617#0" expanded="true" />
+                <element signature="e#4675#4719#0" expanded="true" />
+                <element signature="e#4760#4807#0" expanded="true" />
+                <element signature="e#4856#4901#0" expanded="true" />
+                <element signature="e#5865#6039#0" expanded="true" />
+                <element signature="e#6038#6039#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -206,14 +240,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addMarker</find>
-      <find>mMa</find>
-      <find>Area</find>
-      <find>mMap</find>
-      <find>mapInfo</find>
-      <find>spinner</find>
-      <find>spinnerSelectDrone</find>
-      <find>startActi</find>
+      <find>handle</find>
+      <find>/3</find>
+      <find>Log.e</find>
+      <find>Log</find>
+      <find>txtLatitu</find>
+      <find>droneLocation</find>
+      <find>currentLocationIndex</find>
+      <find>9</find>
+      <find>txtLa</find>
+      <find>regis</find>
+      <find>Log.i</find>
+      <find>startAc</find>
+      <find>INtent</find>
+      <find>btnUp</find>
+      <find>droneForward</find>
+      <find>forward</find>
+      <find>h</find>
+      <find>move</find>
+      <find>listLocation.size()</find>
+      <find>listLocation</find>
+      <find>tốc đô</find>
+      <find>txtHei</find>
+      <find>btnAuto</find>
+      <find>droneHandLocation</find>
+      <find>AUTO</find>
+      <find>Menu</find>
+      <find>reset</find>
+      <find>MEnu</find>
+      <find>isHanding = !</find>
+      <find>match</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2480,18 +2536,28 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Area.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_area_info.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityAreaInfo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityConfigDrone.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Location.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivitySelectDrone.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Drone.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/DroneConfig.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityConfigDrone.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_control_drone.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/DataBase/AppDataBase.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Location.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityAreaInfo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Function/DroneUltis.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_control_drone.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityControlDrone.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/adapters/DroneListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityDroneDetail.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -2502,6 +2568,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2532,7 +2601,21 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="hci_2018_forestmanagement" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="adapters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HCI_20181_B10_Forest_Management_Android" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="hci_2018_forestmanagement" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HCI_20181_B10_Forest_Management_Android" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="hci_2018_forestmanagement" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Function" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HCI_20181_B10_Forest_Management_Android" type="1abcf292:AndroidViewProjectNode" />
@@ -2549,15 +2632,18 @@
               <item name="HCI_20181_B10_Forest_Management_Android" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="HCI_20181_B10_Forest_Management_Android" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2570,6 +2656,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DoanND\Documents\HCI_20181_B10_Forest_Management_Android\app\src\main\res\drawable" />
+      <recent name="C:\Users\DoanND\Documents\HCI_20181_B10_Forest_Management_Android\app\src\main\res\menu" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2699,6 +2786,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -2707,36 +2795,202 @@
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Preview" weight="0.3295302" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30083567" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.3295302" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3259053" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Logcat" order="7" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.3286908" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.19220056" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1624161" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.21587744" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.14066853" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityAreaInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="95" column="57" selection-start-line="93" selection-start-column="24" selection-end-line="95" selection-end-column="57" />
+          <folding>
+            <element signature="method#getBitmapRes#0;class#ActivityAreaInfo#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivitySelectDrone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+          <folding>
+            <element signature="e#3325#3374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityConfigDrone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_area_info.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5321">
+          <caret line="350" selection-start-line="350" selection-end-line="350" />
+          <folding>
+            <element signature="e#15027#15028#0" expanded="true" />
+            <element signature="e#15060#15061#0" expanded="true" />
+            <element signature="e#15107#15108#0" expanded="true" />
+            <element signature="e#15139#15140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_control_drone.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityAreaInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="95" column="57" selection-start-line="93" selection-start-column="24" selection-end-line="95" selection-end-column="57" />
+          <folding>
+            <element signature="method#getBitmapRes#0;class#ActivityAreaInfo#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivitySelectDrone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Area.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+          <folding>
+            <element signature="e#1281#1282#0" expanded="true" />
+            <element signature="e#1320#1321#0" expanded="true" />
+            <element signature="e#1352#1353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_area_info.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="51" selection-start-line="15" selection-start-column="8" selection-end-line="19" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5321">
+          <caret line="350" selection-start-line="350" selection-end-line="350" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityConfigDrone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
@@ -2745,9 +2999,6 @@
             <element signature="e#1988#2012#0" expanded="true" />
           </folding>
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
@@ -2762,20 +3013,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Area.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
+        <state relative-caret-position="731">
           <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
           <folding>
             <element signature="e#1281#1282#0" expanded="true" />
             <element signature="e#1320#1321#0" expanded="true" />
             <element signature="e#1352#1353#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="350" selection-start-line="350" selection-end-line="350" />
         </state>
       </provider>
     </entry>
@@ -2788,9 +3032,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="221">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_drone_detaill.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_area_info.xml">
@@ -2798,73 +3057,252 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+        <state relative-caret-position="287">
+          <caret line="19" column="50" selection-start-line="8" selection-start-column="4" selection-end-line="19" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Drone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="16" />
           <folding>
-            <element signature="e#1142#2076#0" />
+            <element signature="e#2110#2111#0" expanded="true" />
+            <element signature="e#2137#2138#0" expanded="true" />
+            <element signature="e#2176#2177#0" expanded="true" />
+            <element signature="e#2208#2209#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/DroneConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        <state relative-caret-position="136">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_control_drone.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivitySelectDrone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="85" column="135" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="135" />
+          <folding>
+            <element signature="e#3325#3374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/DataBase/AppDataBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Data/Location.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        <state relative-caret-position="474">
+          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
           <folding>
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityAreaInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="95" column="57" selection-start-line="93" selection-start-column="24" selection-end-line="95" selection-end-column="57" />
+        <state relative-caret-position="150">
+          <caret line="231" column="71" selection-start-line="231" selection-start-column="71" selection-end-line="231" selection-end-column="71" />
           <folding>
-            <element signature="e#2195#2239#0" expanded="true" />
-            <element signature="e#2571#2619#0" expanded="true" />
-            <element signature="e#2678#2727#0" expanded="true" />
-            <element signature="e#2783#2828#0" expanded="true" />
-            <element signature="e#2890#2936#0" expanded="true" />
-            <element signature="e#2997#3041#0" expanded="true" />
-            <element signature="e#3652#4476#0" expanded="true" />
-            <element signature="e#4475#4476#0" expanded="true" />
-            <element signature="e#6236#6285#0" expanded="true" />
             <element signature="method#getBitmapRes#0;class#ActivityAreaInfo#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivitySelectDrone.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.0.0.aar/ec958784fe1b26e2b62a0bfe605b743b/jars/classes.jar!/com/google/android/gms/internal/maps/zzt.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+        <state relative-caret-position="102">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-maps-16.0.0.aar/ec958784fe1b26e2b62a0bfe605b743b/jars/classes.jar!/com/google/android/gms/maps/model/Marker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding>
-            <element signature="e#2292#3206#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#3325#3374#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityConfigDrone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+        <state relative-caret-position="424">
+          <caret line="136" column="25" selection-start-line="136" selection-start-column="25" selection-end-line="136" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/Function/DroneUltis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="e#808#865#0" expanded="true" />
+            <element signature="e#1967#2024#0" expanded="true" />
+            <element signature="e#3055#3112#0" expanded="true" />
+            <element signature="e#5060#5117#0" expanded="true" />
+            <element signature="e#6047#6104#0" expanded="true" />
+            <element signature="e#7235#7292#0" expanded="true" />
+            <element signature="e#7488#7545#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation_bar.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="204" column="25" selection-start-line="204" selection-start-column="22" selection-end-line="204" selection-end-column="25" />
+          <folding>
+            <element signature="e#3300#3468#0" expanded="true" />
+            <element signature="e#3467#3468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/activities/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="28" column="57" selection-start-line="27" selection-start-column="4" selection-end-line="28" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_control_drone.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityControlDrone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="291" column="9" selection-start-line="291" selection-start-column="9" selection-end-line="291" selection-end-column="9" />
+          <folding>
+            <element signature="e#2686#2736#0" expanded="true" />
+            <element signature="e#3825#4199#0" expanded="true" />
+            <element signature="e#4198#4199#0" expanded="true" />
+            <element signature="e#4297#4674#0" expanded="true" />
+            <element signature="e#4673#4674#0" expanded="true" />
+            <element signature="e#5308#5711#0" expanded="true" />
+            <element signature="e#5710#5711#0" expanded="true" />
+            <element signature="e#5809#6214#0" expanded="true" />
+            <element signature="e#6213#6214#0" expanded="true" />
+            <element signature="e#6312#6581#0" expanded="true" />
+            <element signature="e#6580#6581#0" expanded="true" />
+            <element signature="e#6682#6951#0" expanded="true" />
+            <element signature="e#6950#6951#0" expanded="true" />
+            <element signature="e#7043#7570#0" expanded="true" />
+            <element signature="e#7569#7570#0" expanded="true" />
+            <element signature="e#7668#8214#0" expanded="true" />
+            <element signature="e#8213#8214#0" expanded="true" />
+            <element signature="e#8274#8275#0" expanded="true" />
+            <element signature="e#8313#8314#0" expanded="true" />
+            <element signature="e#8424#8425#0" expanded="true" />
+            <element signature="e#8463#8464#0" expanded="true" />
+            <element signature="e#8514#8515#0" expanded="true" />
+            <element signature="e#8562#8563#0" expanded="true" />
+            <element signature="e#8601#8602#0" expanded="true" />
+            <element signature="e#8641#8642#0" expanded="true" />
+            <element signature="e#8694#8695#0" expanded="true" />
+            <element signature="e#8744#8745#0" expanded="true" />
+            <element signature="e#8785#8786#0" expanded="true" />
+            <element signature="e#8827#8828#0" expanded="true" />
+            <element signature="e#8884#8885#0" expanded="true" />
+            <element signature="e#8938#8939#0" expanded="true" />
+            <element signature="method#onVisibleHand#0;class#ActivityControlDrone#0" />
+            <element signature="e#12081#12429#0" expanded="true" />
+            <element signature="e#12428#12429#0" expanded="true" />
+            <element signature="e#12507#12678#0" expanded="true" />
+            <element signature="e#12677#12678#0" expanded="true" />
+            <element signature="e#15458#15507#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/adapters/DroneListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/doannd/hci_2018_forestmanagement/ActivityDroneDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="166" column="48" selection-start-line="166" selection-start-column="48" selection-end-line="166" selection-end-column="48" />
+          <folding>
+            <element signature="e#1342#1416#0" expanded="true" />
+            <element signature="e#2313#2657#0" expanded="true" />
+            <element signature="e#2535#2585#0" expanded="true" />
+            <element signature="e#2656#2657#0" expanded="true" />
+            <element signature="e#2846#2889#0" expanded="true" />
+            <element signature="e#2976#3022#0" expanded="true" />
+            <element signature="e#3073#3117#0" expanded="true" />
+            <element signature="e#3501#3553#0" expanded="true" />
+            <element signature="e#3899#3948#0" expanded="true" />
+            <element signature="e#4121#4177#0" expanded="true" />
+            <element signature="e#4318#4365#0" expanded="true" />
+            <element signature="e#4455#4502#0" expanded="true" />
+            <element signature="e#4572#4617#0" expanded="true" />
+            <element signature="e#4675#4719#0" expanded="true" />
+            <element signature="e#4760#4807#0" expanded="true" />
+            <element signature="e#4856#4901#0" expanded="true" />
+            <element signature="e#5865#6039#0" expanded="true" />
+            <element signature="e#6038#6039#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

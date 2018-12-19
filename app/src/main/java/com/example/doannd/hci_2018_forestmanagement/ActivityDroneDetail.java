@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -102,8 +103,8 @@ public class ActivityDroneDetail extends AppCompatActivity {
         txtUserControlling.setText(getResources().getString(R.string.drone_user) + " [" + userControl + "]");
         txtPosition.setText(getResources().getString(R.string.drone_pos) + position);
 
-        txtHeight.setText(getResources().getString(R.string.drone_height) + " " + height + "m");
-        txtSpeed.setText(getResources().getString(R.string.drone_time) + " " + time + "p");
+        txtHeight.setText(getResources().getString(R.string.drone_height) + " [" + height + "]m");
+        txtSpeed.setText(getResources().getString(R.string.drone_time) + " [" + time + "]p");
 
         if (drone.getStatus() == Const.DRONE_STATUS_BUSY)
         {
@@ -154,4 +155,18 @@ public class ActivityDroneDetail extends AppCompatActivity {
         super.onRestart();
         playVideo();
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event){
+        //Changes 'back' button action
+        if(keyCode==KeyEvent.KEYCODE_BACK)
+        {
+            if (getIntent().getBooleanExtra("isFromControlDrone", false))
+                startActivity(new Intent(ActivityDroneDetail.this, MainActivity.class));
+            else
+                super.onKeyDown(keyCode, event);
+        }
+        return true;
+    }
+
 }

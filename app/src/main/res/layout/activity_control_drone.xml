@@ -6,240 +6,268 @@
     android:layout_height="match_parent"
     tools:context=".ActivityControlDrone">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible">
-
-    </FrameLayout>
-
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/layOutControl"
+        android:id="@+id/constraintLayout13"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <ImageButton
-            android:id="@+id/btnFront"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginBottom="48dp"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toTopOf="@+id/btnBack"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/arrow_front_64"
-            android:background="@android:color/transparent"/>
-
-        <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginBottom="16dp"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/arrow_back_64"
-            android:background="@android:color/transparent"/>
-
-        <ImageButton
-            android:id="@+id/btnLeft"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginBottom="64dp"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/arrow_left_64"
-            android:background="@android:color/transparent"/>
-
-        <ImageButton
-            android:id="@+id/btnRight"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginLeft="48dp"
-            android:layout_marginBottom="64dp"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnLeft"
-            app:srcCompat="@drawable/arrow_right_64"
-            android:background="@android:color/transparent"/>
-
-        <ImageButton
-            android:id="@+id/btnUp"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginRight="48dp"
-            android:layout_marginBottom="16dp"
-            android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toTopOf="@+id/btnDown"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/arrow_up_64"
-            />
-
-        <ImageButton
-            android:id="@+id/btnDown"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginRight="48dp"
-            android:layout_marginBottom="32dp"
-            android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/arrow_down_64" />
-    </android.support.constraint.ConstraintLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/layoutAuto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageButton
-            android:id="@+id/btnAuto"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/control_auto_128" />
-
-        <ImageButton
-            android:id="@+id/btnHand"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/control_hand_128" />
-
-        <TextView
-            android:id="@+id/txtStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginRight="80dp"
-            android:text="Tự động"
-            app:layout_constraintEnd_toEndOf="@+id/btnHand"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:textColor="@color/yellow_dark"/>
-
-    </android.support.constraint.ConstraintLayout>
-
-    <LinearLayout
-        android:id="@+id/layoutInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="330dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout15"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/txtLatitude"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Vĩ độ"
-            android:textColor="@color/red_light"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txtLongitude"
+        <fragment
+            android:id="@+id/fragmentMap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kinh độ"
-            android:textColor="@color/red_light"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent" />
+    </android.support.constraint.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/txtForward"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hướng"
-            android:textColor="@color/red_light"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout15"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
-            android:id="@+id/txtTime"
+        <FrameLayout
+            android:id="@+id/frameLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Độ cao"
-            android:textColor="@color/red_light"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:visibility="visible">
 
-        <TextView
-            android:id="@+id/txtSpeed"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tốc độ"
-            android:textColor="@color/red_light"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+        </FrameLayout>
 
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/layoutLimitted"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:background="#ffddb7"
+        <LinearLayout
+            android:id="@+id/layoutInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/txtLatitude"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/map_alert_16" />
+                android:text="Vĩ độ"
+                android:textColor="@color/red_light"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtLimitted"
-                android:layout_width="wrap_content"
+                android:id="@+id/txtLongitude"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
+                android:text="Kinh độ"
+                android:textColor="@color/red_light"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtForward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hướng"
+                android:textColor="@color/red_light"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Độ cao"
+                android:textColor="@color/red_light"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tốc độ"
+                android:textColor="@color/red_light"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutLimitted"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#ffddb7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/map_alert_16" />
+
+                <TextView
+                    android:id="@+id/txtLimitted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Đạt đến giới hạn bay của Drone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutAuto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnAuto"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="Đạt đến giới hạn bay của Drone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView4"
-                app:layout_constraintStart_toStartOf="parent"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/control_auto_128" />
+
+            <ImageButton
+                android:id="@+id/btnHand"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/control_hand_128" />
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                android:text="Tự động"
+                android:textColor="@color/yellow_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/btnHand"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </android.support.constraint.ConstraintLayout>
-    </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layOutControl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutAuto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnFront"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginLeft="64dp"
+                android:layout_marginBottom="48dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@+id/btnBack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/arrow_front_64" />
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginLeft="64dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/arrow_back_64" />
+
+            <ImageButton
+                android:id="@+id/btnLeft"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="64dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/arrow_left_64" />
+
+            <ImageButton
+                android:id="@+id/btnRight"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginBottom="64dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnLeft"
+                app:srcCompat="@drawable/arrow_right_64" />
+
+            <ImageButton
+                android:id="@+id/btnUp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@+id/btnDown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/arrow_up_64" />
+
+            <ImageButton
+                android:id="@+id/btnDown"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginBottom="32dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/arrow_down_64" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
 </android.support.constraint.ConstraintLayout>
